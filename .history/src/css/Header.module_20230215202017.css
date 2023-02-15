@@ -1,0 +1,50 @@
+header {
+  height: 2000px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: var(--margin-small);
+  padding-bottom: var(--margin-small);
+  border-bottom: 0.5px solid black;
+  position: sticky;
+  top: 0;
+}
+
+.menu {
+  display: flex;
+}
+
+.logoAndImage {
+  display: flex;
+  align-items: center;
+}
+.logoImage {
+  width: 50px;
+  height: 50px;
+}
+.logo {
+  font-size: var(--font-large);
+  cursor: pointer;
+  margin: var(--margin-medium);
+}
+.cart {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.cartText {
+  margin: var(--margin-small);
+  font-size: var(--font-small);
+}
+
+.login {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: var(--font-small);
+  margin-right: var(--margin-large);
+}

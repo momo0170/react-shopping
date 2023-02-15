@@ -9,7 +9,9 @@
   --font-large: 32px;
   --font-xlarge: 36px;
 }
-
+html {
+  height: 2000px;
+}
 body {
   margin: 0;
   font-family: 'Nanum Gothic Coding', monospace;

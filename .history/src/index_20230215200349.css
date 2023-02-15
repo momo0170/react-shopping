@@ -8,6 +8,7 @@
   --font-medium: 24px;
   --font-large: 32px;
   --font-xlarge: 36px;
+  height: 200vh;
 }
 
 body {

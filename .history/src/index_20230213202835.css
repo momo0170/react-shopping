@@ -6,15 +6,10 @@
 
   --font-small: 16px;
   --font-medium: 24px;
-  --font-large: 32px;
+  --font-large: 30px;
   --font-xlarge: 36px;
 }
 
 body {
   margin: 0;
-  font-family: 'Nanum Gothic Coding', monospace;
-}
-
-button {
-  font-family: 'Nanum Gothic Coding', monospace;
 }

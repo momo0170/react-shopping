@@ -1,0 +1,10 @@
+:root {
+  --margin-small: 4px;
+  --margin-medium: 10px;
+  --margin-large: 20px;
+  --margin-xlarge: 30px;
+}
+
+body {
+  margin: 0;
+}

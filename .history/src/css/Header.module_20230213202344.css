@@ -1,0 +1,20 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: var(--margin-small);
+}
+
+.menu {
+  display: flex;
+}
+
+.cart {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.login {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

@@ -1,0 +1,12 @@
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+}
+
+.login {
+  border: none;
+}
