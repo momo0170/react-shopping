@@ -27,9 +27,7 @@ export default function Header() {
             </div>
             <span className={styles.cartText}>장바구니</span>
           </button>
-          <button className={styles.login} onClick={goToLogin}>
-            로그인
-          </button>
+          <button className={styles.login}>로그인</button>
         </div>
       </div>
     </header>

@@ -1,0 +1,15 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.logo {
+  font-size: var(--font-xxlarge);
+  /* margin: var(--margin-larges); */
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}

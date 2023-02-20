@@ -1,0 +1,24 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: var(--font-xxlarge);
+  margin: var(--margin-large);
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.id,
+.password {
+  width: 80%;
+  margin: var(--margin-small);
+}

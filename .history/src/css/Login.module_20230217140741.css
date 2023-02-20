@@ -1,0 +1,10 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,59 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 auto;
+}
+.frame {
+  display: flex;
+  flex-direction: column;
+}
+.logo {
+  font-size: var(--font-xxlarge);
+  margin: 0 auto;
+  padding: var(--margin-large);
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+}
+
+.id,
+.password {
+  width: 350px;
+  height: 40px;
+  margin: calc(2 * var(--margin-small));
+  padding-left: var(--margin-medium);
+  font-size: var(--font-small);
+  border: 0.5px solid black;
+  border-radius: 4px;
+}
+.id:focus,
+.password:focus {
+  outline: none;
+}
+.loginBtn,
+.googleLoginBtn,
+.register {
+  border: none;
+  cursor: pointer;
+}
+
+.loginBtn {
+  border: none;
+  border-radius: 4px;
+  background-color: black;
+  color: white;
+  width: 95.5%;
+  height: 40px;
+  margin: calc(var(--margin-small) * 2);
+  padding: 0;
+}
+
+.googleLoginBtn {
+  padding: var(--margin-medium);
+}

@@ -1,0 +1,12 @@
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.frame {
+  display: flex;
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}

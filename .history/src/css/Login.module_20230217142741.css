@@ -1,0 +1,20 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 var(--margin-large);
+}
+
+.logo {
+  font-size: var(--font-xxlarge);
+  margin: var(--margin-large);
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.id {
+  width: 80%;
+}

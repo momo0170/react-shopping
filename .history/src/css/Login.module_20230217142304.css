@@ -1,0 +1,14 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.logo {
+  font-size: var(--font-xxlarge);
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
