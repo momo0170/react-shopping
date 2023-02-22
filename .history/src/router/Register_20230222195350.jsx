@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { registerUser } from '../firebase/Firebase-Auth';
-import styles from '../css/Register.module.css';
+import styles from '../css/Regitser.module.css';
 
 export default function Register() {
   const [account, setAccount] = useState({
@@ -23,7 +23,7 @@ export default function Register() {
   console.log(`이메일 : ${account.email}`);
   console.log(`비밀번호 : ${account.password}`);
   return (
-    <main className={styles.main}>
+    <main>
       <div className={styles.email}>
         <span>이메일</span>
         <input type="text" name="email" onChange={onChangeAccount} />
@@ -33,10 +33,8 @@ export default function Register() {
         <input type="password" name="password" onChange={onChangeAccount} />
       </div>
       <div className={styles.btns}>
-        <button className={styles.cancelBtn}>취소</button>
-        <button onClick={registerAccount} className={styles.registerBtn}>
-          가입
-        </button>
+        <button>취소</button>
+        <button onClick={registerAccount}>가입</button>
       </div>
     </main>
   );

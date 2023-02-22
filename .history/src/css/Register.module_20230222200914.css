@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 auto;
+}
+.email span {
+  margin: var(--margin-medium);
+}
+.email input {
+  width: 200px;
+  height: 20px;
+}

@@ -23,7 +23,7 @@ export default function Register() {
   console.log(`이메일 : ${account.email}`);
   console.log(`비밀번호 : ${account.password}`);
   return (
-    <main className={styles.main}>
+    <main>
       <div className={styles.email}>
         <span>이메일</span>
         <input type="text" name="email" onChange={onChangeAccount} />
