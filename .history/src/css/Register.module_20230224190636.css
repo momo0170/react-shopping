@@ -54,7 +54,6 @@
 .homeBtn {
   padding: 0;
   margin: 0;
-  font-size: var(--font-xsmall);
 }
 .cancelBtn {
   background-color: white;

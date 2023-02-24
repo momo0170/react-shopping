@@ -4,7 +4,7 @@ import styles from '../css/Register.module.css';
 import { useNavigate } from 'react-router-dom';
 
 export default function Register() {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   const [account, setAccount] = useState({
     email: '',
     password: '',
@@ -24,8 +24,8 @@ export default function Register() {
   };
 
   const goToHome = () => {
-    navigate('/');
-  };
+    navigate('/')
+  }
   console.log(`이메일 : ${account.email}`);
   console.log(`비밀번호 : ${account.password}`);
   return (
@@ -42,12 +42,8 @@ export default function Register() {
         <button onClick={registerAccount} className={styles.registerBtn}>
           가입
         </button>
+        <button className={styles.homeBtn} onClick={}>메인으로</button>
         <button className={styles.cancelBtn}>취소</button>
-        <div>
-          <span className={styles.homeBtn} onClick={goToHome}>
-            메인으로
-          </span>
-        </div>
       </div>
     </main>
   );

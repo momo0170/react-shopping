@@ -42,12 +42,10 @@ export default function Register() {
         <button onClick={registerAccount} className={styles.registerBtn}>
           가입
         </button>
+        <span className={styles.homeBtn} onClick={goToHome}>
+          메인으로
+        </span>
         <button className={styles.cancelBtn}>취소</button>
-        <div>
-          <span className={styles.homeBtn} onClick={goToHome}>
-            메인으로
-          </span>
-        </div>
       </div>
     </main>
   );

@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { registerUser } from '../firebase/Firebase-Auth';
 import styles from '../css/Register.module.css';
-import { useNavigate } from 'react-router-dom';
 
 export default function Register() {
-  const navigate = useNavigate();
   const [account, setAccount] = useState({
     email: '',
     password: '',
@@ -22,10 +20,6 @@ export default function Register() {
     const result = window.confirm('가입하시겠습니까?');
     result && registerUser(account.email, account.password);
   };
-
-  const goToHome = () => {
-    navigate('/');
-  };
   console.log(`이메일 : ${account.email}`);
   console.log(`비밀번호 : ${account.password}`);
   return (
@@ -42,12 +36,8 @@ export default function Register() {
         <button onClick={registerAccount} className={styles.registerBtn}>
           가입
         </button>
+        <buttot>홈으로 이동</buttot>
         <button className={styles.cancelBtn}>취소</button>
-        <div>
-          <span className={styles.homeBtn} onClick={goToHome}>
-            메인으로
-          </span>
-        </div>
       </div>
     </main>
   );

@@ -43,11 +43,9 @@ export default function Register() {
           가입
         </button>
         <button className={styles.cancelBtn}>취소</button>
-        <div>
-          <span className={styles.homeBtn} onClick={goToHome}>
-            메인으로
-          </span>
-        </div>
+        <span className={styles.homeBtn} onClick={goToHome}>
+          메인으로
+        </span>
       </div>
     </main>
   );
