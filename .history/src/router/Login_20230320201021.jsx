@@ -24,7 +24,8 @@ export default function Login() {
 
   // 구글로 로그인
   const loginWithGoogle = () => {
-    googleLogin().then(() => navigate('/'));
+    console.log('구글로 로그인 시도');
+    googleLogin();
   };
 
   // 입력한 계정 정보를 저장

@@ -48,7 +48,7 @@ export async function checkLogin(callback) {
 
 // 구글로 로그인
 export async function googleLogin() {
-  return signInWithPopup(auth, provider)
+  signInWithPopup(auth, provider)
     .then((result) => {
       console.log(result);
     })

@@ -24,7 +24,8 @@ export default function Login() {
 
   // 구글로 로그인
   const loginWithGoogle = () => {
-    googleLogin().then(() => navigate('/'));
+    console.log('구글로 로그인 시도');
+    googleLogin();
   };
 
   // 입력한 계정 정보를 저장
@@ -59,13 +60,13 @@ export default function Login() {
           />
           <button className={styles.loginBtn}>로그인</button>
         </form>
-        <div className={styles.googleLoginBtn} onClick={loginWithGoogle}>
+        <div className={styles.googleLoginBtn}>
           <img
             src="/images/google-icon.png"
             className={styles.googleLogo}
             alt="구글 로고"
           />
-          <span>구글로 로그인</span>
+          <span onClick={loginWithGoogle}>구글로 로그인</span>
         </div>
         <div className={styles.registerSection}>
           <button className={styles.register} onClick={goToRegister}>

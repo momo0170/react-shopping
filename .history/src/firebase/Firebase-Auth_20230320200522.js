@@ -20,7 +20,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+export const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 // firebase에 사용자 등록
@@ -48,11 +48,11 @@ export async function checkLogin(callback) {
 
 // 구글로 로그인
 export async function googleLogin() {
-  return signInWithPopup(auth, provider)
+  signInWithPopup(auth, provider)
     .then((result) => {
       console.log(result);
     })
     .catch((error) => {
-      console.log(error);
+      console.log(result);
     });
 }
