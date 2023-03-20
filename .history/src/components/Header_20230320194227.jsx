@@ -15,19 +15,20 @@ export default function Header() {
   };
   // 로그아웃
   const goToLogout = () => {
-    logout().then(() => setUser(null));
+    logout().then(() => {
+      setUser({});
+    });
   };
   // 로그인 감지
   useEffect(() => {
     checkLogin((user) => {
       // setIsLogin((prev) => !prev);
-      // console.log(user);
-      setUser(user); // 로그인된 사용자가 있다면 user에 저장
+      user && setUser(user);
     });
   }, []);
 
   console.log(user);
-
+  console.log(isLogin);
   return (
     <header>
       <div className={styles.header}>

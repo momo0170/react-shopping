@@ -27,6 +27,7 @@ export default function Header() {
   }, []);
 
   console.log(user);
+  user && console.log('ㅇㅇ');
 
   return (
     <header>

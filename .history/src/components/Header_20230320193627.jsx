@@ -6,7 +6,7 @@ import styles from '../css/Header.module.css';
 import { logout, checkLogin } from '../firebase/Firebase-Auth';
 import {} from 'firebase/auth';
 export default function Header() {
-  // const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
   const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
   // 로그인
@@ -15,19 +15,18 @@ export default function Header() {
   };
   // 로그아웃
   const goToLogout = () => {
-    logout().then(() => setUser(null));
+    logout();
   };
   // 로그인 감지
   useEffect(() => {
     checkLogin((user) => {
-      // setIsLogin((prev) => !prev);
-      // console.log(user);
-      setUser(user); // 로그인된 사용자가 있다면 user에 저장
+      setIsLogin((prev) => !prev);
+      setUser(user);
     });
   }, []);
 
   console.log(user);
-
+  console.log(isLogin);
   return (
     <header>
       <div className={styles.header}>
@@ -48,7 +47,7 @@ export default function Header() {
             </div>
             <span className={styles.cartText}>장바구니</span>
           </button>
-          {user ? (
+          {isLogin ? (
             <button className={styles.login} onClick={goToLogout}>
               로그아웃
             </button>

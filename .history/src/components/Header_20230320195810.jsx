@@ -21,12 +21,13 @@ export default function Header() {
   useEffect(() => {
     checkLogin((user) => {
       // setIsLogin((prev) => !prev);
-      // console.log(user);
+      console.log(user);
       setUser(user); // 로그인된 사용자가 있다면 user에 저장
     });
   }, []);
 
   console.log(user);
+  user && console.log('ㅇㅇ');
 
   return (
     <header>
