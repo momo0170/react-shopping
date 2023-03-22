@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from 'react';
 import { BsCart2 } from 'react-icons/bs';
-import { RiEditBoxLine } from 'react-icons/ri';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
 import styles from '../css/Header.module.css';
@@ -47,11 +46,8 @@ export default function Header() {
           {/* 편집 */}
           {user ? (
             user.isAdmin ? (
-              <button className={styles.edit} onClick={goToEdit}>
-                <div className={styles.editIcon}>
-                  <RiEditBoxLine size="20" />
-                </div>
-                <span className={styles.editText}>제품편집</span>
+              <button onClick={goToEdit} className={styles.edit}>
+                제품 편집
               </button>
             ) : null
           ) : null}

@@ -1,5 +1,5 @@
 header {
-  height: 2000px;
+  height: 100%;
 }
 
 .header {
@@ -19,6 +19,7 @@ header {
 .logoAndImage {
   display: flex;
   align-items: center;
+  margin-left: var(--margin-medium);
 }
 .logoImage {
   width: 50px;
@@ -47,4 +48,12 @@ header {
   cursor: pointer;
   font-size: var(--font-small);
   margin-right: var(--margin-large);
+}
+
+.edit {
+  display: flex;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: var(--font-small);
 }

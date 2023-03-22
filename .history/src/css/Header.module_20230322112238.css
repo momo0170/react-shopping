@@ -1,7 +1,15 @@
 header {
+  height: 100%;
+}
+
+.header {
   display: flex;
   justify-content: space-between;
   margin: var(--margin-small);
+  padding-bottom: var(--margin-small);
+  border-bottom: 0.5px solid black;
+  position: sticky;
+  top: 0;
 }
 
 .menu {
@@ -11,6 +19,7 @@ header {
 .logoAndImage {
   display: flex;
   align-items: center;
+  margin-left: var(--margin-medium);
 }
 .logoImage {
   width: 50px;
@@ -21,20 +30,24 @@ header {
   cursor: pointer;
   margin: var(--margin-medium);
 }
-.cart {
+.cart,
+.edit {
   display: flex;
   align-items: center;
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
-.cartText {
+.cartText,
+.editText {
   margin: var(--margin-small);
   font-size: var(--font-small);
 }
+
 .login {
   border: none;
   background-color: transparent;
   cursor: pointer;
   font-size: var(--font-small);
+  margin-right: var(--margin-large);
 }

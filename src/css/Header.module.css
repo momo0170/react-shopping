@@ -30,14 +30,16 @@ header {
   cursor: pointer;
   margin: var(--margin-medium);
 }
-.cart {
+.cart,
+.edit {
   display: flex;
   align-items: center;
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
-.cartText {
+.cartText,
+.editText {
   margin: var(--margin-small);
   font-size: var(--font-small);
 }

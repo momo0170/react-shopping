@@ -51,7 +51,7 @@ export default function Header() {
                 <div className={styles.editIcon}>
                   <RiEditBoxLine size="20" />
                 </div>
-                <span className={styles.editText}>제품편집</span>
+                제품편집
               </button>
             ) : null
           ) : null}

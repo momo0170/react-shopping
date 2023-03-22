@@ -1,5 +1,5 @@
 header {
-  height: 2000px;
+  height: 100%;
 }
 
 .header {
@@ -7,7 +7,7 @@ header {
   justify-content: space-between;
   margin: var(--margin-small);
   padding-bottom: var(--margin-small);
-  border-bottom: 1px solid black;
+  border-bottom: 0.5px solid black;
   position: sticky;
   top: 0;
 }
@@ -19,6 +19,7 @@ header {
 .logoAndImage {
   display: flex;
   align-items: center;
+  margin-left: var(--margin-medium);
 }
 .logoImage {
   width: 50px;
@@ -40,7 +41,16 @@ header {
   margin: var(--margin-small);
   font-size: var(--font-small);
 }
+
 .login {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: var(--font-small);
+  margin-right: var(--margin-large);
+}
+
+.edit {
   border: none;
   background-color: transparent;
   cursor: pointer;
