@@ -5,12 +5,13 @@ import styles from '../css/Login.module.css';
 import { loginUser, googleLogin } from '../firebase/Firebase-Auth';
 
 export default function Login() {
-  const { setUser } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
   const [emailAccount, setEmailAccount] = useState({
     email: '',
     password: '',
   });
   const navigate = useNavigate();
+
   // 이메일로 로그인
   const loginWithEmail = (e) => {
     e.preventDefault();
@@ -21,10 +22,12 @@ export default function Login() {
       })
       .then(() => navigate('/'));
   };
+
   // 구글로 로그인
   const loginWithGoogle = () => {
     googleLogin().then(() => navigate('/'));
   };
+
   // 입력한 계정 정보를 저장
   const onChangeAccount = (e) => {
     setEmailAccount({

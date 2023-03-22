@@ -5,7 +5,7 @@ import styles from '../css/Login.module.css';
 import { loginUser, googleLogin } from '../firebase/Firebase-Auth';
 
 export default function Login() {
-  const { setUser } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
   const [emailAccount, setEmailAccount] = useState({
     email: '',
     password: '',

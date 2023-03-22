@@ -40,6 +40,8 @@ export default function Header() {
           </div>
         </div>
         <div className={styles.menu}>
+          {/* 편집 */}
+          {user ? user.admin ? <p>관리자</p> : <p>일반</p> : null}
           {/* 장바구니 */}
           <button className={styles.cart}>
             <div className={styles.cartIcon}>

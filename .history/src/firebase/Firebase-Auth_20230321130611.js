@@ -8,7 +8,6 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from 'firebase/auth';
-import { getDatabase, ref, get } from 'firebase/database';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -23,7 +22,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
-const db = getDatabase();
 
 // firebase에 사용자 등록
 export async function registerUser(email, password) {
@@ -43,32 +41,12 @@ export async function logout() {
 // 로그인 옵저버
 export async function checkLogin(callback) {
   // 로그인이 된 상태면 user 객체를 파라미터로 전달한다.
-  return onAuthStateChanged(auth, async (user) => {
-    const result = user && (await readData(user)); // user(로그인된 사용자)가 있다면 데이터베이스에서 데이터를 읽어옴
-    callback(result); // admin 사용자인지 아닌지 판별된 결과를 callback 함수로 전달
+  return onAuthStateChanged(auth, (user) => {
+    callback(user); // user 객체가 callback 함수의 매개변수로 들어감
   });
 }
 
 // 구글로 로그인
 export async function googleLogin() {
   return signInWithPopup(auth, provider);
-}
-
-// 데이터 베이스 읽기
-async function readData(user) {
-  const adminRef = ref(db, 'admins'); // db의 admins 레퍼런스
-  return get(adminRef) // 해당 레퍼런스의 데이터를 읽음
-    .then((snapshot) => {
-      if (snapshot.exists()) {
-        const data = snapshot.val();
-        const isAdmin = data.includes(user.uid);
-        return { ...user, isAdmin };
-      } else {
-        console.log('No data available');
-        return user;
-      }
-    })
-    .catch((error) => {
-      console.error(error);
-    });
 }

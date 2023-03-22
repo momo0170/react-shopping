@@ -20,6 +20,7 @@ export default function Header() {
   // 로그인 감지
   useEffect(() => {
     checkLogin((user) => {
+      console.log(user);
       setUser(user);
     });
   }, []);
@@ -40,14 +41,12 @@ export default function Header() {
           </div>
         </div>
         <div className={styles.menu}>
-          {/* 장바구니 */}
           <button className={styles.cart}>
             <div className={styles.cartIcon}>
               <BsCart2 size="20" />
             </div>
             <span className={styles.cartText}>장바구니</span>
           </button>
-          {/* 로그인 버튼 */}
           {user ? (
             <button className={styles.login} onClick={goToLogout}>
               로그아웃

@@ -61,6 +61,7 @@ async function readData(user) {
     .then((snapshot) => {
       if (snapshot.exists()) {
         const data = snapshot.val();
+        console.log(data);
         const isAdmin = data.includes(user.uid);
         return { ...user, isAdmin };
       } else {

@@ -45,7 +45,7 @@ export async function checkLogin(callback) {
   // 로그인이 된 상태면 user 객체를 파라미터로 전달한다.
   return onAuthStateChanged(auth, async (user) => {
     const result = user && (await readData(user)); // user(로그인된 사용자)가 있다면 데이터베이스에서 데이터를 읽어옴
-    callback(result); // admin 사용자인지 아닌지 판별된 결과를 callback 함수로 전달
+    callback(user); // user 객체가 callback 함수의 매개변수로 들어감
   });
 }
 
@@ -61,11 +61,11 @@ async function readData(user) {
     .then((snapshot) => {
       if (snapshot.exists()) {
         const data = snapshot.val();
+        console.log(data);
         const isAdmin = data.includes(user.uid);
         return { ...user, isAdmin };
       } else {
         console.log('No data available');
-        return user;
       }
     })
     .catch((error) => {

@@ -23,7 +23,7 @@ export default function Login() {
   };
   // 구글로 로그인
   const loginWithGoogle = () => {
-    googleLogin().then(() => navigate('/'));
+    googleLogin().then((result) => console.log(resul););
   };
   // 입력한 계정 정보를 저장
   const onChangeAccount = (e) => {
