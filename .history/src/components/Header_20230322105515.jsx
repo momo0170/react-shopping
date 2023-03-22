@@ -9,9 +9,6 @@ export default function Header() {
   // const [isLogin, setIsLogin] = useState(false);
   const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
-  const goToEdit = () => {
-    navigate('/edit');
-  };
   // 로그인
   const goToLogin = () => {
     navigate('/login');
@@ -44,20 +41,9 @@ export default function Header() {
         </div>
         <div className={styles.menu}>
           {/* 편집 */}
-          {user ? (
-            user.isAdmin ? (
-              <span onClick={goToEdit}>제품 편집</span>
-            ) : null
-          ) : null}
+          {user ? user.isAdmin ? <span>제품 편집</span> : nul : null}
           {/* 장바구니 */}
-          {user && (
-            <button className={styles.cart}>
-              <div className={styles.cartIcon}>
-                <BsCart2 size="20" />
-              </div>
-              <span className={styles.cartText}>장바구니</span>
-            </button>
-          )}
+
           {/* 로그인 버튼 */}
           {user ? (
             <button className={styles.login} onClick={goToLogout}>
