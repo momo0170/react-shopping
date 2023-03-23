@@ -1080,10 +1080,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cloudinary/html@^1.9.1":
-  version "1.9.1"
-  resolved "https://registry.yarnpkg.com/@cloudinary/html/-/html-1.9.1.tgz#931fa32c365b5a1eab222dec1b8e8f2dba5f0917"
-  integrity sha512-RuTkRlNd6I5sVOgRWABB8/KZD34VaWy9+SyBPd56UE8RUcP5V/kV9WewT9ptAYXXS47T08HDySiGsXpyhmlMyw==
+"@cloudinary/html@^1.11.2":
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/@cloudinary/html/-/html-1.11.2.tgz#a906234880ffad3b6e0666a650157b885204375e"
+  integrity sha512-IibBZliI7MOK3dxvz0WlsEyTIsqZhY3SiCBQM0CNwCKxn3N1TO8OgetfU26Now1lJbdoF5JQ8S7Cn6ZWNuU1KA==
   dependencies:
     "@types/lodash.clonedeep" "^4.5.6"
     "@types/lodash.debounce" "^4.0.6"
@@ -1092,12 +1092,12 @@
     lodash.debounce "^4.0.8"
     typescript "^4.1.2"
 
-"@cloudinary/react@^1.9.1":
-  version "1.9.1"
-  resolved "https://registry.yarnpkg.com/@cloudinary/react/-/react-1.9.1.tgz#7f1aa6433430f329e9c0fef9b8ac4f982c51fb8a"
-  integrity sha512-GuGmSTqX/gcSXFmowU5jC0KgPwKozJgD/+wldocNnitWrGwup+WwDtQza42sTbXJbjePwZLdkAUIaDFqBlZu8A==
+"@cloudinary/react@^1.11.2":
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/@cloudinary/react/-/react-1.11.2.tgz#6eb540533c18d77d134c47b705e76a867c4ee0a7"
+  integrity sha512-ZnVthMW7TExLMPmyven4N7EVr2oX2yZqnHn6EHBlni9iM0AZd6qtR8R5/SscxNLNwgBieWuvmejUlUT4LqPpMg==
   dependencies:
-    "@cloudinary/html" "^1.9.1"
+    "@cloudinary/html" "^1.11.2"
 
 "@cloudinary/transformation-builder-sdk@^1.2.0":
   version "1.2.3"
@@ -1106,12 +1106,26 @@
   dependencies:
     "@cloudinary/url-gen" "^1.7.0"
 
-"@cloudinary/url-gen@^1.7.0", "@cloudinary/url-gen@^1.9.0":
+"@cloudinary/transformation-builder-sdk@^1.2.7":
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/@cloudinary/transformation-builder-sdk/-/transformation-builder-sdk-1.2.7.tgz#974ebada3425f913c74122441f5eb546443f9100"
+  integrity sha512-Q1fhw37BXXmN6/BCxdnw3OUJ6aAy/zpDWH5t+xIwmG5GtYUYMZqOjvdOkOhWBmus9ptq9znuGsYn8h5vtSjT+w==
+  dependencies:
+    "@cloudinary/url-gen" "^1.7.0"
+
+"@cloudinary/url-gen@^1.7.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@cloudinary/url-gen/-/url-gen-1.9.0.tgz#0a8421ff4a4330993e9cf6b8225d918e4614af9e"
   integrity sha512-rw2/KkWsb2oBTQX58E7Zm1pOb3+K7tqHPxms2C7P49qzJbqG+y/u1StwfqCrE94mZMr8q+o47cHxoQJMwWz1fQ==
   dependencies:
     "@cloudinary/transformation-builder-sdk" "^1.2.0"
+
+"@cloudinary/url-gen@^1.9.2":
+  version "1.9.2"
+  resolved "https://registry.yarnpkg.com/@cloudinary/url-gen/-/url-gen-1.9.2.tgz#799dd889ad6e487e1d4447a550c7df3b9b91a851"
+  integrity sha512-LFL79Galcj8WZaXW6QOOt5LQVkioQdH7DR7blYcU9Zi0ae1y0L4Ujmr69RsUNshCNy/EdVAg0aVG/jjqKDnJsg==
+  dependencies:
+    "@cloudinary/transformation-builder-sdk" "^1.2.7"
 
 "@csstools/normalize.css@*":
   version "12.0.0"
