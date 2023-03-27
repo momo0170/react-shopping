@@ -20,10 +20,7 @@ export default function Edit() {
     setFile(e.target.files);
   };
   const handleSubmit = (e) => {
-    e.preventDefault();
     console.log(e);
-    // 이미지를 Cloudinary에 업로드 후 url 반환
-    // firebase 데이터베이스에 저장
   };
   console.log(product);
   console.log(file);
