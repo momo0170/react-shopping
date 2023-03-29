@@ -46,10 +46,8 @@ export default function Edit() {
           <input name="제품설명" type="text" placeholder="제품 설명" required />
           <input name="옵션" type="text" placeholder="옵션" required />
           <div>
-            <button type="submit">등록</button>
-            <button type="button" onClick={goToHome}>
-              메인으로
-            </button>
+            <button>등록</button>
+            <button onClick={goToHome}>메인으로</button>
           </div>
         </div>
       </form>
