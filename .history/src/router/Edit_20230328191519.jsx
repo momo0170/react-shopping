@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { Cloudinary } from '@cloudinary/url-gen';
-import { uploadImage } from '../api/imageUpload';
 
 export default function Edit() {
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState({
+    name: '',
+    price: '',
+    category: '',
+    description: '',
+    option: '',
+  });
   const [file, setFile] = useState();
 
   const cld = new Cloudinary({
@@ -16,7 +21,25 @@ export default function Edit() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    uploadImage(file).then((res) => console.log(res.url));
+    console.log(e);
+    const formData = new FormData();
+    for (let i = 0; i < files.length; i++) {
+      let file = files[i];
+      formData.append('file', file);
+      formData.append('upload_preset', 'docs_upload_example_us_preset');
+
+      fetch(url, {
+        method: 'POST',
+        body: formData,
+      })
+        .then((response) => {
+          return response.text();
+        })
+        .then((data) => {
+          console.log(data);
+        });
+    }
+    // 이미지를 Cloudinary에 업로드 후 url 반환
     // firebase 데이터베이스에 저장
   };
   console.log(product);

@@ -16,7 +16,7 @@ export default function Edit() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    uploadImage(file).then((res) => console.log(res.url));
+    uploadImage(file).then(console.log(result));
     // firebase 데이터베이스에 저장
   };
   console.log(product);
