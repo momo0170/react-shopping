@@ -3,8 +3,10 @@ import { Cloudinary } from '@cloudinary/url-gen';
 import { uploadImage } from '../api/imageUpload';
 import { useNavigate } from 'react-router-dom';
 import { writeData } from '../firebase/Firebase-Auth';
+import { uuid4 } from 'uuid4';
 
 export default function Edit() {
+  console.log(uuid4());
   const navigate = useNavigate();
   const [product, setProduct] = useState({});
   const [file, setFile] = useState();
@@ -22,19 +24,22 @@ export default function Edit() {
     console.log(e);
   };
   const handleDataChange = (e) => {
-    setProduct({ ...product, [e.target.name]: e.target.value });
+    setProduct({
+      id: uuid4(),
+      ...product,
+      e.target.name === '옵션' ? console.log('객체로 저장') : [e.target.name]: e.target.value;
+      // [e.target.name]: e.target.value,
+      // 쉼표로 구분해서 객체로 저장
+    });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    uploadImage(file) //
-      .then((res) => {
-        writeData(product, res.url);
-      });
+    uploadImage(file).then((res) => console.log(res.url));
+    writeData(product);
+    // firebase 데이터베이스에 저장
   };
-
   console.log(product);
   console.log(file);
-
   return (
     <main>
       <form onSubmit={handleSubmit}>
@@ -50,35 +55,35 @@ export default function Edit() {
         </div>
         <div>
           <input
-            name="name"
+            name="제품명"
             type="text"
             placeholder="제품명"
             required
             onChange={handleDataChange}
           />
           <input
-            name="price"
+            name="가격"
             type="text"
             placeholder="가격"
             required
             onChange={handleDataChange}
           />
           <input
-            name="category"
+            name="카테고리"
             type="text"
             placeholder="카테고리"
             required
             onChange={handleDataChange}
           />
           <input
-            name="description"
+            name="제품설명"
             type="text"
             placeholder="제품 설명"
             required
             onChange={handleDataChange}
           />
           <input
-            name="option"
+            name="옵션"
             type="tex t"
             placeholder="옵션"
             required

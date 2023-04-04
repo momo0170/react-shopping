@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Cloudinary } from '@cloudinary/url-gen';
 import { uploadImage } from '../api/imageUpload';
 import { useNavigate } from 'react-router-dom';
-import { writeData } from '../firebase/Firebase-Auth';
 
 export default function Edit() {
   const navigate = useNavigate();
@@ -21,20 +20,14 @@ export default function Edit() {
     setFile(e.target.files);
     console.log(e);
   };
-  const handleDataChange = (e) => {
-    setProduct({ ...product, [e.target.name]: e.target.value });
-  };
   const handleSubmit = (e) => {
     e.preventDefault();
-    uploadImage(file) //
-      .then((res) => {
-        writeData(product, res.url);
-      });
-  };
+    uploadImage(file).then((res) => console.log(res.url));
 
+    // firebase 데이터베이스에 저장
+  };
   console.log(product);
   console.log(file);
-
   return (
     <main>
       <form onSubmit={handleSubmit}>
@@ -49,41 +42,11 @@ export default function Edit() {
           />
         </div>
         <div>
-          <input
-            name="name"
-            type="text"
-            placeholder="제품명"
-            required
-            onChange={handleDataChange}
-          />
-          <input
-            name="price"
-            type="text"
-            placeholder="가격"
-            required
-            onChange={handleDataChange}
-          />
-          <input
-            name="category"
-            type="text"
-            placeholder="카테고리"
-            required
-            onChange={handleDataChange}
-          />
-          <input
-            name="description"
-            type="text"
-            placeholder="제품 설명"
-            required
-            onChange={handleDataChange}
-          />
-          <input
-            name="option"
-            type="tex t"
-            placeholder="옵션"
-            required
-            onChange={handleDataChange}
-          />
+          <input name="제품명" type="text" placeholder="제품명" required />
+          <input name="가격" type="text" placeholder="가격" required />
+          <input name="카테고리" type="text" placeholder="카테고리" required />
+          <input name="제품설명" type="text" placeholder="제품 설명" required />
+          <input name="옵션" type="tex t" placeholder="옵션" required />
           <div>
             <button type="submit">등록</button>
             <button type="button" onClick={goToHome}>

@@ -8,6 +8,7 @@ export default function Edit() {
   const navigate = useNavigate();
   const [product, setProduct] = useState({});
   const [file, setFile] = useState();
+  const [imgUrl, setImgUrl] = useState();
 
   const cld = new Cloudinary({
     cloud: {
@@ -26,15 +27,17 @@ export default function Edit() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    uploadImage(file) //
-      .then((res) => {
-        writeData(product, res.url);
-      });
+    uploadImage(file).then((res) => {
+      setImgUrl(res.url)
+      writeData(product, imgUrl);
+      );
+    }
+    
   };
 
   console.log(product);
   console.log(file);
-
+  console.log(imgUrl);
   return (
     <main>
       <form onSubmit={handleSubmit}>

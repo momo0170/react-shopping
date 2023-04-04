@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Cloudinary } from '@cloudinary/url-gen';
 import { uploadImage } from '../api/imageUpload';
 import { useNavigate } from 'react-router-dom';
-import { writeData } from '../firebase/Firebase-Auth';
 
 export default function Edit() {
   const navigate = useNavigate();
@@ -26,15 +25,12 @@ export default function Edit() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    uploadImage(file) //
-      .then((res) => {
-        writeData(product, res.url);
-      });
-  };
+    uploadImage(file).then((res) => console.log(res.url));
 
+    // firebase 데이터베이스에 저장
+  };
   console.log(product);
   console.log(file);
-
   return (
     <main>
       <form onSubmit={handleSubmit}>
@@ -50,35 +46,35 @@ export default function Edit() {
         </div>
         <div>
           <input
-            name="name"
+            name="제품명"
             type="text"
             placeholder="제품명"
             required
             onChange={handleDataChange}
           />
           <input
-            name="price"
+            name="가격"
             type="text"
             placeholder="가격"
             required
             onChange={handleDataChange}
           />
           <input
-            name="category"
+            name="카테고리"
             type="text"
             placeholder="카테고리"
             required
             onChange={handleDataChange}
           />
           <input
-            name="description"
+            name="제품설명"
             type="text"
             placeholder="제품 설명"
             required
             onChange={handleDataChange}
           />
           <input
-            name="option"
+            name="옵션"
             type="tex t"
             placeholder="옵션"
             required

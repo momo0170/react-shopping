@@ -26,15 +26,12 @@ export default function Edit() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    uploadImage(file) //
-      .then((res) => {
-        writeData(product, res.url);
-      });
+    uploadImage(file).then((res) => console.log(res.url));
+    writeData(product);
   };
 
   console.log(product);
   console.log(file);
-
   return (
     <main>
       <form onSubmit={handleSubmit}>

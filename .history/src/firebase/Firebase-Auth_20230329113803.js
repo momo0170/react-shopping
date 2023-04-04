@@ -8,8 +8,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from 'firebase/auth';
-import { getDatabase, ref, get, set } from 'firebase/database';
-import uuid4 from 'uuid4';
+import { getDatabase, ref, get } from 'firebase/database';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -74,14 +73,6 @@ async function readData(user) {
     });
 }
 
-// 데이터 베이스 쓰기
-export async function writeData(data, imgUrl) {
-  console.log(imgUrl);
-  const id = uuid4();
-  set(ref(db, `products/${id}`), {
-    ...data,
-    image: imgUrl,
-    price: parseInt(data.price),
-    option: data.option.split(','),
-  });
+export async function writeData(data) {
+  set(ref(db, 'users/' + userId), data);
 }

@@ -26,10 +26,9 @@ export default function Edit() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    uploadImage(file) //
-      .then((res) => {
-        writeData(product, res.url);
-      });
+    uploadImage(file).then((res) => {
+      writeData(product, res.url);
+    });
   };
 
   console.log(product);
