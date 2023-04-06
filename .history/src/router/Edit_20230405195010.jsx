@@ -38,8 +38,7 @@ export default function Edit() {
 
   return (
     <main className={styles.main}>
-      <form onSubmit={handleSubmit} className={styles.form}>
-        <span>제품 등록</span>
+      <form onSubmit={handleSubmit}>
         {/* 이미지 업로드 */}
         <div className={styles.imgAndUpload}>
           {/* 이미지 */}
@@ -48,7 +47,7 @@ export default function Edit() {
           </div>
 
           {/* 파일 박스 */}
-          <div className={styles.fileBox}>
+          <div className="fileBox">
             <input
               value={file ? file[0].name : '첨부파일'}
               className={styles.imageName}
@@ -64,7 +63,7 @@ export default function Edit() {
               className={styles.upload}
             />
             <label htmlFor="uploadFile" className={styles.label}>
-              파일찾기
+              업로드
             </label>
           </div>
         </div>
@@ -119,7 +118,7 @@ export default function Edit() {
               onClick={goToHome}
               className={styles.goToHome}
             >
-              메인
+              메인으로
             </button>
           </div>
         </div>

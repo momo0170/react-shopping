@@ -38,7 +38,7 @@ export default function Edit() {
 
   return (
     <main className={styles.main}>
-      <form onSubmit={handleSubmit} className={styles.form}>
+      <form onSubmit={handleSubmit}>
         <span>제품 등록</span>
         {/* 이미지 업로드 */}
         <div className={styles.imgAndUpload}>
@@ -48,7 +48,7 @@ export default function Edit() {
           </div>
 
           {/* 파일 박스 */}
-          <div className={styles.fileBox}>
+          <div className="fileBox">
             <input
               value={file ? file[0].name : '첨부파일'}
               className={styles.imageName}

@@ -1,0 +1,23 @@
+.main {
+  display: flex;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.imgAndUpload {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+}

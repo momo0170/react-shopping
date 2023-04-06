@@ -1,0 +1,33 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgAndUpload {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.name,
+.price,
+.category,
+.description,
+.option {
+  width: 200px;
+  height: 30px;
+  margin-bottom: var(--margin-small);
+  border: 1px solid black;
+}

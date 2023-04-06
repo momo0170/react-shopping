@@ -37,38 +37,25 @@ export default function Edit() {
   console.log(file);
 
   return (
-    <main className={styles.main}>
-      <form onSubmit={handleSubmit} className={styles.form}>
-        <span>제품 등록</span>
-        {/* 이미지 업로드 */}
+    <main>
+      <form onSubmit={handleSubmit}>
         <div className={styles.imgAndUpload}>
-          {/* 이미지 */}
-          <div className={styles.image}>
-            {file && <img src={URL.createObjectURL(file[0])} alt="image" />}
-          </div>
-
-          {/* 파일 박스 */}
-          <div className={styles.fileBox}>
-            <input
-              value={file ? file[0].name : '첨부파일'}
-              className={styles.imageName}
-              disabled
+          {file && (
+            <img
+              src={URL.createObjectURL(file[0])}
+              alt="image"
+              className={styles.image}
             />
-            <input
-              id="uploadFile"
-              name="file"
-              type="file"
-              accept="image/*"
-              onChange={handleChange}
-              required
-              className={styles.upload}
-            />
-            <label htmlFor="uploadFile" className={styles.label}>
-              파일찾기
-            </label>
-          </div>
+          )}
+          <input
+            name="file"
+            type="file"
+            accept="image/*"
+            onChange={handleChange}
+            required
+            className={styles.upload}
+          />
         </div>
-        {/* 입력란 */}
         <div className={styles.inputs}>
           <input
             name="name"
@@ -108,18 +95,12 @@ export default function Edit() {
             placeholder="옵션"
             required
             onChange={handleDataChange}
-            className={styles.option}
+            className={styles}
           />
           <div>
-            <button type="submit" className={styles.register}>
-              등록
-            </button>
-            <button
-              type="button"
-              onClick={goToHome}
-              className={styles.goToHome}
-            >
-              메인
+            <button type="submit">등록</button>
+            <button type="button" onClick={goToHome}>
+              메인으로
             </button>
           </div>
         </div>
