@@ -4,6 +4,7 @@ import { getData } from '../firebase/Firebase-Auth';
 import Product from '../components/Product';
 
 export default function Products() {
+  const myImage = new CloudinaryImage('sample', { cloudName: 'momo0170' });
   const {
     isLoading,
     isError,
@@ -19,6 +20,9 @@ export default function Products() {
   console.log(products);
   return (
     <>
+      <div>
+        <AdvancedImage cldImg={myImage} />
+      </div>
       <ul>
         {products &&
           products.map((product) => (

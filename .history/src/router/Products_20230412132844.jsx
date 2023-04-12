@@ -4,6 +4,7 @@ import { getData } from '../firebase/Firebase-Auth';
 import Product from '../components/Product';
 
 export default function Products() {
+  const myImage = cld.image('jacket');
   const {
     isLoading,
     isError,

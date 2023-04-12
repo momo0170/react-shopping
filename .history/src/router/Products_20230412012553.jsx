@@ -18,13 +18,11 @@ export default function Products() {
   }
   console.log(products);
   return (
-    <>
-      <ul>
-        {products &&
-          products.map((product) => (
-            <Product key={product.id} product={product} />
-          ))}
-      </ul>
-    </>
+    <ul>
+      {products &&
+        products.map((product) => (
+          <Product key={product.id} product={product} />
+        ))}
+    </ul>
   );
 }

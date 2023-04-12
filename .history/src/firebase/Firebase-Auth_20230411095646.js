@@ -8,7 +8,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from 'firebase/auth';
-import { getDatabase, ref, get, set, child } from 'firebase/database';
+import { getDatabase, ref, get, set } from 'firebase/database';
 import uuid4 from 'uuid4';
 
 const firebaseConfig = {
@@ -76,10 +76,10 @@ async function readData(user) {
 
 // 데이터 베이스 쓰기
 export async function writeData(data, imgUrl) {
+  console.log(imgUrl);
   const id = uuid4();
   set(ref(db, `products/${id}`), {
     ...data,
-    id,
     image: imgUrl,
     price: parseInt(data.price),
     option: data.option.split(','),
@@ -87,17 +87,4 @@ export async function writeData(data, imgUrl) {
 }
 
 // 데이터 베이스 읽기
-export async function getData() {
-  return get(ref(db, `products`)) //
-    .then((snapshot) => {
-      if (snapshot.exists()) {
-        return Object.values(snapshot.val());
-      } else {
-        console.log('No data available');
-        return [];
-      }
-    }) //
-    .catch((error) => {
-      console.error(error);
-    });
-}
+export async function getData() {}

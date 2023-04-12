@@ -76,6 +76,7 @@ async function readData(user) {
 
 // 데이터 베이스 쓰기
 export async function writeData(data, imgUrl) {
+  console.log(imgUrl);
   const id = uuid4();
   set(ref(db, `products/${id}`), {
     ...data,
@@ -94,7 +95,6 @@ export async function getData() {
         return Object.values(snapshot.val());
       } else {
         console.log('No data available');
-        return [];
       }
     }) //
     .catch((error) => {

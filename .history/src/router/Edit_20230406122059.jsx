@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Cloudinary } from '@cloudinary/url-gen';
 import { uploadImage } from '../api/imageUpload';
 import { useNavigate } from 'react-router-dom';
 import { writeData } from '../firebase/Firebase-Auth';
@@ -11,6 +12,11 @@ export default function Edit() {
   const [isRegister, setIsRegister] = useState(false); // 제품이 등록
   const [isSuccess, setIsSuccess] = useState(false);
 
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: 'momo0170',
+    },
+  });
   const goToHome = () => {
     navigate('/');
   };
@@ -24,19 +30,20 @@ export default function Edit() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsRegister(true);
-    // 이미지 업로드
     uploadImage(file) //
-      .then((url) => {
-        writeData(product, url) //
+      .then((res) => {
+        writeData(product, res.url) //
           .then(() => {
+            setProduct({});
             setIsSuccess(true);
-            setTimeout(() => setIsSuccess(false), 2000);
+            setTimeout(() => setIsSuccess(false), 3000);
           });
       })
       .then(() => setIsRegister(false));
   };
 
   console.log(product);
+  console.log(file);
 
   return (
     <main className={styles.main}>
@@ -47,7 +54,7 @@ export default function Edit() {
         <div className={styles.imgAndUpload}>
           {/* 이미지 */}
           <div className={styles.image}>
-            {file && <img src={URL.createObjectURL(file[0])} alt="img" />}
+            {file && <img src={URL.createObjectURL(file[0])} alt="image" />}
           </div>
 
           {/* 파일 박스 */}

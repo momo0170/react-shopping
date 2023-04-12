@@ -27,6 +27,7 @@ export default function Edit() {
     // 이미지 업로드
     uploadImage(file) //
       .then((url) => {
+        console.log(url);
         writeData(product, url) //
           .then(() => {
             setIsSuccess(true);
@@ -37,6 +38,7 @@ export default function Edit() {
   };
 
   console.log(product);
+  console.log(file);
 
   return (
     <main className={styles.main}>

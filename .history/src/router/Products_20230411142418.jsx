@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import { UserContext } from '../context/UserContext';
 import { useQuery } from '@tanstack/react-query';
 import { getData } from '../firebase/Firebase-Auth';
 import Product from '../components/Product';
@@ -18,13 +19,11 @@ export default function Products() {
   }
   console.log(products);
   return (
-    <>
-      <ul>
-        {products &&
-          products.map((product) => (
-            <Product key={product.id} product={product} />
-          ))}
-      </ul>
-    </>
+    <ul>
+      {products &&
+        products.map((product) => (
+          <Product key={product.id} product={product} />
+        ))}
+    </ul>
   );
 }

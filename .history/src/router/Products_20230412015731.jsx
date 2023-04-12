@@ -2,8 +2,11 @@ import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { getData } from '../firebase/Firebase-Auth';
 import Product from '../components/Product';
+import { CloudinaryImage } from '@cloudinary/url-gen';
+import { AdvancedImage } from '@cloudinary/react';
 
 export default function Products() {
+  const myImage = new CloudinaryImage('sample', { cloudName: 'momo0170' });
   const {
     isLoading,
     isError,
@@ -19,6 +22,9 @@ export default function Products() {
   console.log(products);
   return (
     <>
+      <div>
+        <AdvancedImage cldImg={myImage} />
+      </div>
       <ul>
         {products &&
           products.map((product) => (
