@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  margin-bottom: var(--margin-small);
+}
+
+.category {
+  font-size: var(--font-xsmall);
+  color: #707070;
+  margin-bottom: var(--margin-small);
+}

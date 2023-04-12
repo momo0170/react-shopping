@@ -1,0 +1,8 @@
+ul {
+  padding: 0;
+  margin-left: var(--margin-medium);
+  margin-right: var(--margin-medium);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+  gap: 50px 30px;
+}

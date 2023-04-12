@@ -1,0 +1,7 @@
+ul {
+  padding: 0;
+  margin-left: var(--margin-medium);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px 30px;
+}
