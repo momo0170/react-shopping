@@ -1,0 +1,43 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.frame {
+  display: flex;
+  /* width: 8 */
+}
+
+.image {
+  width: 400px;
+  height: 500px;
+}
+
+.information {
+  margin-left: var(--margin-medium);
+}
+
+.category,
+.name,
+.description,
+.price {
+  margin-bottom: var(--margin-small);
+}
+
+.addBtn {
+  border: none;
+  background-color: transparent;
+}
+.information div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+.addBtn {
+  margin-top: var(--margin-medium);
+  padding: var(--margin-medium);
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+}

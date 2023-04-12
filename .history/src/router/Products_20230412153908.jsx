@@ -16,13 +16,15 @@ export default function Products() {
   if (isError) {
     return <p>에러</p>;
   }
-
+  console.log(products);
   return (
     <>
       <ul>
         {products &&
           products.map((product) => (
-            <Product key={product.id} product={product} />
+            <li>
+              <Product key={product.id} product={product} />
+            </li>
           ))}
       </ul>
     </>

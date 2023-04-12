@@ -16,7 +16,7 @@ export default function Products() {
   if (isError) {
     return <p>에러</p>;
   }
-
+  console.log(products);
   return (
     <>
       <ul>

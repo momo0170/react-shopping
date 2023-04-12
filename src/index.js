@@ -8,6 +8,7 @@ import Login from './router/Login';
 import Register from './router/Register';
 import { UserContextProvider } from './context/UserContext';
 import Edit from './router/Edit';
+import ProductDetail from './router/ProductDetail';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Products />,
+      },
+      {
+        path: '/product/:id',
+        element: <ProductDetail />,
       },
     ],
   },

@@ -8,7 +8,7 @@ export default function Product(props) {
   return (
     <Link className={styles.main} to={`product/${id}`} state={props.product}>
       <img src={image} alt="product-image" className={styles.image} />
-      <span className={styles.category}>[{category}]</span>
+      <span className={styles.category}>#{category}</span>
       <span className={styles.name}>{name}</span>
       <span className={styles.price}>{price.toLocaleString()}원</span>
     </Link>
