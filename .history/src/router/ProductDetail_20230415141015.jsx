@@ -11,7 +11,7 @@ export default function ProductDetail() {
     location.state;
   const [selectedOpt, setSelectedOpt] = useState(option && option[0]);
   const [quantity, setQuantity] = useState(1);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false)
 
   const [cart, setCart] = useState({
     id,
@@ -25,14 +25,14 @@ export default function ProductDetail() {
     setSelectedOpt(e.target.value);
   };
   const addCart = () => {
+    //
     addCartData(user.uid, cart) //
       .then(() => {
-        console.log('추가');
-        setIsSuccess(true);
-        setTimeout(() => setIsSuccess(false), 2000);
+        setIsSuccess(true)
       });
   };
-
+  console.log(cart);
+  console.log(selectedOpt);
   return (
     <main className={styles.main}>
       <div className={styles.frame}>
@@ -51,7 +51,9 @@ export default function ProductDetail() {
                   </option>
                 ))}
             </select>
-            {isSuccess ? <p>장바구니에 추가되었습니다.</p> : null}
+            {
+              isSuccess === ? <p>장바구니에 추가되었습니다.</p> : null
+            }
             <button className={styles.addBtn} onClick={addCart}>
               장바구니에 추가
             </button>

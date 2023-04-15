@@ -48,5 +48,5 @@ select {
 }
 
 p {
-  font-size: var(--font-min);
+  font-size: 10px;
 }

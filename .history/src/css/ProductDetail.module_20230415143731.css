@@ -47,6 +47,6 @@ select {
   cursor: pointer;
 }
 
-p {
-  font-size: var(--font-min);
-}
+/* p {
+  font-size: var(--font-xsmall);
+} */

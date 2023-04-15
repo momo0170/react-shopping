@@ -25,14 +25,16 @@ export default function ProductDetail() {
     setSelectedOpt(e.target.value);
   };
   const addCart = () => {
+    //
     addCartData(user.uid, cart) //
       .then(() => {
-        console.log('추가');
         setIsSuccess(true);
         setTimeout(() => setIsSuccess(false), 2000);
       });
   };
-
+  console.log(cart);
+  console.log(selectedOpt);
+  console.log(user.uid);
   return (
     <main className={styles.main}>
       <div className={styles.frame}>

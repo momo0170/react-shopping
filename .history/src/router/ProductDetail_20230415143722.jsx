@@ -29,7 +29,7 @@ export default function ProductDetail() {
       .then(() => {
         console.log('추가');
         setIsSuccess(true);
-        setTimeout(() => setIsSuccess(false), 2000);
+        // setTimeout(() => setIsSuccess(false), 2000);
       });
   };
 
