@@ -103,8 +103,18 @@ export async function getData() {
 }
 
 // 장바구니 정보 추가
-export async function addCartData(uid, cartData) {
-  set(ref(db, `cart/${uid}/${cartData.id}`), {
-    ...cartData,
-  });
+export async function addCart(userId, selected, data) {
+  console.log(userId, selected, data);
+  // return get(ref(db, `cart/${userId}`)) //
+  //   .then((snapshot) => {
+  //     if (snapshot.exists()) {
+  //       return Object.values(snapshot.val());
+  //     } else {
+  //       console.log('No data available');
+  //       return [];
+  //     }
+  //   }) //
+  //   .catch((error) => {
+  //     console.error(error);
+  //   });
 }

@@ -28,6 +28,8 @@ export default function Header() {
     });
   }, []);
 
+  console.log(user);
+
   return (
     <header>
       <div className={styles.header}>

@@ -9,29 +9,22 @@ export default function ProductDetail() {
   const { user } = useContext(UserContext);
   const { category, description, id, image, name, option, price } =
     location.state;
-  const [selectedOpt, setSelectedOpt] = useState(option && option[0]);
+  const [selected, setSelected] = useState(option && option[0]);
   const [quantity, setQuantity] = useState(1);
-
-  const [cart, setCart] = useState({
-    id,
-    name,
-    image,
-    price,
-    quantity,
-    selectedOpt,
-  });
   const handleChange = (e) => {
-    setSelectedOpt(e.target.value);
+    setSelected(e.target.value);
   };
   const addCart = () => {
-    //
-    addCartData(user.uid, cart) //
+    // category, name, price, selected, id,  정보를 데이터 베이스에 추가
+    addCartData(user.uid, id, name, selected, category, price, quantity) //
       .then(() => {
         console.log('추가완료');
       });
   };
-  console.log(cart);
-  console.log(selectedOpt);
+  console.log(selected);
+  console.log(user.uid);
+  console.log(id);
+  console.log(location.state);
   return (
     <main className={styles.main}>
       <div className={styles.frame}>

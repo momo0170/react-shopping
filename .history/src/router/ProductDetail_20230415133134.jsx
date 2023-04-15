@@ -18,20 +18,19 @@ export default function ProductDetail() {
     image,
     price,
     quantity,
-    selectedOpt,
   });
   const handleChange = (e) => {
-    setSelectedOpt(e.target.value);
+    setSelected(e.target.value);
   };
   const addCart = () => {
-    //
+    // category, name, price, selected, id,  정보를 데이터 베이스에 추가
     addCartData(user.uid, cart) //
       .then(() => {
         console.log('추가완료');
       });
   };
   console.log(cart);
-  console.log(selectedOpt);
+  console.log(selected);
   return (
     <main className={styles.main}>
       <div className={styles.frame}>

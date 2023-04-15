@@ -108,3 +108,13 @@ export async function addCartData(uid, cartData) {
     ...cartData,
   });
 }
+
+// 장바구니 정보 삭제
+export async function removeCartData(cartData) {
+  set(ref(db, 'cart'), cartData);
+}
+
+// 장바구니 정보 가져오기
+export async function getCartData() {
+  get(ref(db, `cart`));
+}

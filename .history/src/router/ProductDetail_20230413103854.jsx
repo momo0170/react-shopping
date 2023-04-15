@@ -2,36 +2,22 @@ import React, { useContext, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import styles from '../css/ProductDetail.module.css';
 import { UserContext } from '../context/UserContext';
-import { addCartData } from '../firebase/Firebase-Auth';
 
 export default function ProductDetail() {
   const location = useLocation();
-  const { user } = useContext(UserContext);
+  const user = useContext(UserContext);
   const { category, description, id, image, name, option, price } =
     location.state;
-  const [selectedOpt, setSelectedOpt] = useState(option && option[0]);
-  const [quantity, setQuantity] = useState(1);
-
-  const [cart, setCart] = useState({
-    id,
-    name,
-    image,
-    price,
-    quantity,
-    selectedOpt,
-  });
+  const [selected, setSelected] = useState(option && option[0]);
   const handleChange = (e) => {
-    setSelectedOpt(e.target.value);
+    setSelected(e.target.value);
   };
   const addCart = () => {
-    //
-    addCartData(user.uid, cart) //
-      .then(() => {
-        console.log('추가완료');
-      });
+    // category, name, price, selected 정보를 데이터 베이스에 추가
+    addCart();
   };
-  console.log(cart);
-  console.log(selectedOpt);
+  console.log(selected);
+  console.log(user);
   return (
     <main className={styles.main}>
       <div className={styles.frame}>

@@ -18,7 +18,6 @@ export default function ProductDetail() {
     image,
     price,
     quantity,
-    selectedOpt,
   });
   const handleChange = (e) => {
     setSelectedOpt(e.target.value);

@@ -103,8 +103,21 @@ export async function getData() {
 }
 
 // 장바구니 정보 추가
-export async function addCartData(uid, cartData) {
-  set(ref(db, `cart/${uid}/${cartData.id}`), {
-    ...cartData,
+export async function addCartData(
+  userId,
+  id,
+  name,
+  selected,
+  category,
+  price,
+  quantity
+) {
+  set(ref(db, `cart/${userId}/${id}`), {
+    id,
+    name,
+    category,
+    price,
+    quantity,
+    option: selected,
   });
 }
