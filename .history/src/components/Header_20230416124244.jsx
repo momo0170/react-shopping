@@ -16,9 +16,6 @@ export default function Header() {
   const goToCart = () => {
     navigate('/cart');
   };
-  const goToHome = () => {
-    navigate('/');
-  };
   // 로그인
   const goToLogin = () => {
     navigate('/login');
@@ -38,7 +35,7 @@ export default function Header() {
     <header>
       <div className={styles.header}>
         <div>
-          <div className={styles.logoAndImage} onClick={goToHome}>
+          <div className={styles.logoAndImage}>
             <img
               className={styles.logoImage}
               src="/images/shopping.png"

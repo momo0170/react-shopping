@@ -8,7 +8,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from 'firebase/auth';
-import { getDatabase, ref, get, set, remove } from 'firebase/database';
+import { getDatabase, ref, get, set, onValue } from 'firebase/database';
 import uuid4 from 'uuid4';
 
 const firebaseConfig = {
@@ -122,7 +122,6 @@ export async function getCartData(uid) {
     });
 }
 
-// 장바구니 데이터 삭제
 export async function deleteCartData(uid, cartData) {
   return remove(ref(db, `cart/${uid}/${cartData.id}`), {
     ...cartData,

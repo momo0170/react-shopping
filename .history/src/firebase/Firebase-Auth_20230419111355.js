@@ -8,7 +8,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from 'firebase/auth';
-import { getDatabase, ref, get, set, remove } from 'firebase/database';
+import { getDatabase, ref, get, set, child } from 'firebase/database';
 import uuid4 from 'uuid4';
 
 const firebaseConfig = {
@@ -109,7 +109,6 @@ export async function addCartData(uid, cartData) {
   });
 }
 
-// 장바구니 데이터 가져오기
 export async function getCartData(uid) {
   return get(ref(db, `cart/${uid}`)) //
     .then((snapshot) => {
@@ -120,11 +119,4 @@ export async function getCartData(uid) {
         console.log('데이터를 찾을 수 없음');
       }
     });
-}
-
-// 장바구니 데이터 삭제
-export async function deleteCartData(uid, cartData) {
-  return remove(ref(db, `cart/${uid}/${cartData.id}`), {
-    ...cartData,
-  });
 }
