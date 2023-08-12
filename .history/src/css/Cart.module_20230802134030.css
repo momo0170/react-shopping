@@ -1,0 +1,16 @@
+li {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 10px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(204, 204, 204);
+  margin: 0px 60px;
+  border-radius: 20px;
+}

@@ -1,0 +1,8 @@
+.number {
+  width: 12px;
+  height: 12px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  position: absolute;
+}
