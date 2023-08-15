@@ -22,7 +22,10 @@ export default function Cart() {
   const hasProduct = cart && cart.length > 0; // 1개 이상 있다면
   const totalPrice =
     cart &&
-    cart.reduce((prev, value) => prev + value.price * value.quantity, 0);
+    cart.reduce(
+      (prev, value) => prev + parseInt(value.price) * value.quantity,
+      0
+    );
   console.log(cart);
   return (
     <>
@@ -41,7 +44,7 @@ export default function Cart() {
         <AiOutlinePlus />
         <PriceCard text="배송액" price={SHIPPING} />
         <FaEquals />
-        <PriceCard text="총 가격" price={totalPrice && totalPrice + SHIPPING} />
+        <PriceCard text="총 가격" price={totalPrice + SHIPPING} />
       </div>
     </>
   );

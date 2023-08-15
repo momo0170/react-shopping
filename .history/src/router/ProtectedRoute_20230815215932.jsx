@@ -9,10 +9,10 @@ export default function ProtectedRoute({ children, requireAdmin }) {
   // 조건이 맞으면 전달된 children을 보여줌
   // 맞지 않으면 / 로 이동
   const { user } = useContext(UserContext);
-  const admin = user && user.isAdmin;
-
+  console.log(user.isAdmin);
+  console.log(user.isAdmin, requireAdmin);
   // 사용자가 없거나, requireAdmin이 ture지만 사용자가 어드민 권한이 없는 경우
-  if (!user || (requireAdmin && !admin)) {
+  if (!user || (requireAdmin && !user.isAdmin)) {
     // replace를 ture로 설정하면 이동할 주소로 이동한 후에 뒤로가기가 안된다.
     // 즉, 히스토리 스택에 저장되지 않는 것이다.
     // 홈으로 이동하되 히스토리 스택에 저장되지 않도록 한다.

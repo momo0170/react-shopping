@@ -10,7 +10,7 @@ export default function ProtectedRoute({ children, requireAdmin }) {
   // 맞지 않으면 / 로 이동
   const { user } = useContext(UserContext);
   const admin = user && user.isAdmin;
-
+  console.log(user.isAdmin, requireAdmin);
   // 사용자가 없거나, requireAdmin이 ture지만 사용자가 어드민 권한이 없는 경우
   if (!user || (requireAdmin && !admin)) {
     // replace를 ture로 설정하면 이동할 주소로 이동한 후에 뒤로가기가 안된다.

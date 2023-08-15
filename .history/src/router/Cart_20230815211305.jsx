@@ -41,7 +41,7 @@ export default function Cart() {
         <AiOutlinePlus />
         <PriceCard text="배송액" price={SHIPPING} />
         <FaEquals />
-        <PriceCard text="총 가격" price={totalPrice && totalPrice + SHIPPING} />
+        <PriceCard text="총 가격" price={totalPrice + SHIPPING} />
       </div>
     </>
   );
