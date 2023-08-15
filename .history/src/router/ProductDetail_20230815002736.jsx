@@ -25,6 +25,7 @@ export default function ProductDetail() {
   };
 
   const { addtoCart } = useCart();
+  console.log(user);
 
   // mutate 실행, "장바구니 추가" 버튼을 클릭 시
   const addCart = () => {

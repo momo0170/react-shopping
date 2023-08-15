@@ -32,11 +32,7 @@ const router = createBrowserRouter([
       {
         // 롤그인한 사용자가 있으면 cart로 이동시키고, 로그인하지 않은 상태라면 home으로 리다이렉트한다.
         path: '/cart',
-        element: (
-          <ProtectedRoute>
-            <Cart />
-          </ProtectedRoute>
-        ),
+        element: <Cart />,
       },
     ],
   },

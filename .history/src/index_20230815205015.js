@@ -32,11 +32,7 @@ const router = createBrowserRouter([
       {
         // 롤그인한 사용자가 있으면 cart로 이동시키고, 로그인하지 않은 상태라면 home으로 리다이렉트한다.
         path: '/cart',
-        element: (
-          <ProtectedRoute>
-            <Cart />
-          </ProtectedRoute>
-        ),
+        element: <Cart />,
       },
     ],
   },
@@ -50,10 +46,9 @@ const router = createBrowserRouter([
   },
   {
     // 사용자가 있는지 없는지, 어드민인지 아닌지에 따라 보여줄지, 리다이렉트 해줄지 결정해야 한다.
-    // 어드민 권한이 true일 경우에만 해당 페이지를 보여줌
     path: '/edit',
     element: (
-      <ProtectedRoute requireAdmin={true}>
+      <ProtectedRoute>
         <Edit />
       </ProtectedRoute>
     ),

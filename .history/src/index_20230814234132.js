@@ -38,25 +38,24 @@ const router = createBrowserRouter([
           </ProtectedRoute>
         ),
       },
+      {
+        path: '/login',
+        element: <Login />,
+      },
+      {
+        path: '/register',
+        element: <Register />,
+      },
+      {
+        // 사용자가 있는지 없는지, 어드민인지 아닌지에 따라 보여줄지, 리다이렉트 해줄지 결정해야 한다.
+        path: '/edit',
+        element: (
+          <ProtectedRoute requireAdmin={true}>
+            <Edit />
+          </ProtectedRoute>
+        ),
+      },
     ],
-  },
-  {
-    path: '/login',
-    element: <Login />,
-  },
-  {
-    path: '/register',
-    element: <Register />,
-  },
-  {
-    // 사용자가 있는지 없는지, 어드민인지 아닌지에 따라 보여줄지, 리다이렉트 해줄지 결정해야 한다.
-    // 어드민 권한이 true일 경우에만 해당 페이지를 보여줌
-    path: '/edit',
-    element: (
-      <ProtectedRoute requireAdmin={true}>
-        <Edit />
-      </ProtectedRoute>
-    ),
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));

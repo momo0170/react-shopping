@@ -28,12 +28,7 @@ export default function Header() {
   const goToLogout = () => {
     logout();
   };
-  // 로그인 감지
-  useEffect(() => {
-    checkLogin((user) => {
-      setUser(user);
-    });
-  }, []);
+
   return (
     <header>
       <div className={styles.header}>
