@@ -25,7 +25,7 @@ export default function CartProduct(props) {
       <img src={image} alt="product-image" className={styles.cartImage} />
       <span>{name}</span>
       <span>{selectedOpt}</span>
-      <span>{`${price.toLocaleString()}원`}</span>
+      <span>{price.toLocaleString()}</span>
       <div className={styles.btns}>
         <button onClick={minusQuantity} className={styles.minusBtn}>
           -

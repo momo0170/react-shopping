@@ -7,23 +7,12 @@ button {
   outline: none;
   background-color: transparent;
   cursor: pointer;
+}
+.plusBtn,
+.minusBtn {
   background-color: white;
   border: 1.5px solid black;
   border-radius: 4px;
   outline: 0;
   background-color: transparent;
-}
-
-button:hover {
-  background-color: black;
-  color: white;
-}
-.minusBtn {
-  margin-right: 10px;
-}
-.plusBtn {
-  margin-left: 10px;
-}
-.deleteBtn {
-  padding: 5px 5px;
 }

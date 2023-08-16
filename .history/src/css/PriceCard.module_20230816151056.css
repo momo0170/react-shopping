@@ -1,0 +1,9 @@
+.frame {
+  display: flex;
+  justify-content: space-around;
+}
+
+.text,
+.price {
+  font-size: 16px;
+}

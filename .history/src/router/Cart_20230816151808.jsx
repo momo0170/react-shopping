@@ -27,7 +27,7 @@ export default function Cart() {
       <h1>장바구니</h1>
       <div className={styles.informations}>
         <div className={styles.list}>
-          <div className={styles.lineFirst}></div>
+          <div className={styles.line}></div>
           {!hasProduct && <p>장바구니에 상품이 없습니다.</p>}
           {hasProduct &&
             cart.map((item) => (
@@ -35,10 +35,8 @@ export default function Cart() {
                 <CartProduct product={item} />
               </li>
             ))}
-          <div className={styles.lineLast}></div>
+          <div className={styles.line}></div>
         </div>
-
-        {/* 결제 내역 */}
         <div className={styles.price}>
           <div className={styles.lineFirst}></div>
           <h1>결제 내역</h1>

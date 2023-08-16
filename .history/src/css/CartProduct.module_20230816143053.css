@@ -1,0 +1,15 @@
+.cartImage {
+  width: 100px;
+}
+
+button {
+  cursor: pointer;
+}
+.plusBtn,
+.minusBtn {
+  background-color: white;
+  border: 1.5px solid black;
+  border-radius: 4px;
+  outline: 0;
+  background-color: transparent;
+}

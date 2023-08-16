@@ -5,10 +5,12 @@ li {
   align-items: center;
   margin: 20px 10px;
 }
-.lineFirst,
-.lineLast {
+.line {
   border-bottom: 1px solid black;
   margin: 20px 40px;
+}
+.price .line {
+  margin: 20px 0;
 }
 
 .informations {
@@ -21,11 +23,4 @@ li {
   width: 40vw;
   margin: 0px 60px;
   border-radius: 20px;
-}
-.price .lineFirst {
-  margin: 20px 0;
-}
-.price .lineLast {
-  margin: 10px 0;
-  border-bottom: 0.5px solid black;
 }

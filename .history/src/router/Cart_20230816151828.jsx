@@ -35,10 +35,8 @@ export default function Cart() {
                 <CartProduct product={item} />
               </li>
             ))}
-          <div className={styles.lineLast}></div>
+          <div className={styles.line}></div>
         </div>
-
-        {/* 결제 내역 */}
         <div className={styles.price}>
           <div className={styles.lineFirst}></div>
           <h1>결제 내역</h1>

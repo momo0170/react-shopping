@@ -1,6 +1,8 @@
 import React from 'react';
 import CartProduct from '../components/CartProduct';
 import PriceCard from '../components/PriceCard';
+import { AiOutlinePlus } from 'react-icons/ai';
+import { FaEquals } from 'react-icons/fa6';
 import styles from '../css/Cart.module.css';
 import useCart from '../hooks/useCart';
 
@@ -24,10 +26,10 @@ export default function Cart() {
   console.log(cart);
   return (
     <>
-      <h1>장바구니</h1>
+      <h2>장바구니</h2>
       <div className={styles.informations}>
         <div className={styles.list}>
-          <div className={styles.lineFirst}></div>
+          <div className={styles.line}></div>
           {!hasProduct && <p>장바구니에 상품이 없습니다.</p>}
           {hasProduct &&
             cart.map((item) => (
@@ -35,16 +37,13 @@ export default function Cart() {
                 <CartProduct product={item} />
               </li>
             ))}
-          <div className={styles.lineLast}></div>
+          <div className={styles.line}></div>
         </div>
-
-        {/* 결제 내역 */}
         <div className={styles.price}>
-          <div className={styles.lineFirst}></div>
-          <h1>결제 내역</h1>
           <PriceCard text="상품 총액" price={totalPrice} />
+          <AiOutlinePlus />
           <PriceCard text="배송액" price={SHIPPING} />
-          <div className={styles.lineLast}></div>
+          <FaEquals />
           <PriceCard
             text="총 가격"
             price={totalPrice && totalPrice + SHIPPING}

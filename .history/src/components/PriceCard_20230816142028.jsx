@@ -5,7 +5,7 @@ export default function PriceCard({ text, price }) {
   return (
     <div className={styles.frame}>
       <p className={styles.text}>{text}</p>
-      <p className={styles.price}>{`${price.toLocaleString()}원`}</p>
+      <p className={styles.price}>{price.toLocaleString()}</p>
     </div>
   );
 }

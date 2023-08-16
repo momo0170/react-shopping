@@ -13,13 +13,8 @@ button {
   outline: 0;
   background-color: transparent;
 }
-
-button:hover {
-  background-color: black;
-  color: white;
-}
 .minusBtn {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 .plusBtn {
   margin-left: 10px;
