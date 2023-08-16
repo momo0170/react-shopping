@@ -38,6 +38,9 @@ header {
   background-color: transparent;
   cursor: pointer;
 }
+.cart {
+  position: relative;
+}
 .cartText,
 .editText {
   margin: var(--margin-small);

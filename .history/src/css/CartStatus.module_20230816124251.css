@@ -1,0 +1,9 @@
+.number {
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 1%;
+}

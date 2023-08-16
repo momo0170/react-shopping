@@ -10,8 +10,8 @@ export default function CartStatus() {
   return (
     <div className={styles.frame}>
       {products && (
-        <div>
-          <div className={styles.number}>{products.length}</div>
+        <div className={styles.number}>
+          <div>{products.length}</div>
         </div>
       )}
     </div>

@@ -1,18 +1,16 @@
-.frame div {
+.frame {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .number {
   position: absolute;
-  top: 18%;
-  left: 16px;
+  top: -3px;
+  /* left: 16px; */
   width: 15px;
   height: 15px;
-  font-size: 9px;
   text-align: center;
-  background-color: #e20000;
+  background-color: black;
   color: white;
   border-radius: 50%;
 }

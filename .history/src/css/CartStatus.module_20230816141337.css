@@ -4,6 +4,9 @@
   justify-content: center;
 }
 
+h1 {
+  padding: 10px;
+}
 .number {
   position: absolute;
   top: 18%;
