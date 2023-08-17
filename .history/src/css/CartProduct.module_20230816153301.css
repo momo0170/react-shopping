@@ -1,25 +1,7 @@
 .cartImage {
   width: 100px;
 }
-.productInfo {
-  display: flex;
-}
-.text {
-  display: flex;
-  flex-direction: column;
-}
-.text span {
-  margin: 5px 5px;
-}
-.option {
-  color: gray;
-  font-size: 13px;
-}
-.price {
-  font-size: 18px;
-  font-weight: 800;
-  padding-top: 20px;
-}
+
 button {
   border: none;
   outline: none;
@@ -44,8 +26,4 @@ button {
 }
 .deleteBtn {
   padding: 5px 5px;
-}
-.deleteBtn:hover {
-  background-color: black;
-  color: white;
 }

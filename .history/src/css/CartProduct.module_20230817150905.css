@@ -13,12 +13,12 @@
 }
 .option {
   color: gray;
-  font-size: 13px;
+  font-size: 14px;
 }
 .price {
   font-size: 18px;
   font-weight: 800;
-  padding-top: 20px;
+  /* margin-top: 20px; */
 }
 button {
   border: none;

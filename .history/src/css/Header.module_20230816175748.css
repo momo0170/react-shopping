@@ -1,9 +1,5 @@
 header {
-  position: sticky;
-  top: 0;
   height: 100%;
-  background-color: white;
-  z-index: 2;
 }
 
 .header {
@@ -12,6 +8,8 @@ header {
   margin: var(--margin-small);
   padding-bottom: var(--margin-small);
   border-bottom: 0.5px solid black;
+  /* position: sticky; */
+  top: 0;
 }
 
 .menu {

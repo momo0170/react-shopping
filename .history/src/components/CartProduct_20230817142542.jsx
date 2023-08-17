@@ -25,9 +25,9 @@ export default function CartProduct(props) {
       <div className={styles.productInfo}>
         <img src={image} alt="product-image" className={styles.cartImage} />
         <div className={styles.text}>
-          <span className={styles.name}>{name}</span>
-          <span className={styles.option}>{`[옵션: ${selectedOpt}]`}</span>
-          <span className={styles.price}>{`${price.toLocaleString()}원`}</span>
+          <span>{name}</span>
+          <span>{`[옵션: ${selectedOpt}]`}</span>
+          <span>{`${price.toLocaleString()}원`}</span>
         </div>
       </div>
       <div className={styles.btns}>

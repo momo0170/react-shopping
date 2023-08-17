@@ -33,7 +33,6 @@ export default function Header() {
       setUser(user);
     });
   }, []);
-
   return (
     <header>
       <div className={styles.header}>

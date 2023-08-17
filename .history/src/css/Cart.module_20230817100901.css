@@ -9,7 +9,6 @@ li {
 .lineLast {
   border-bottom: 1px solid black;
   margin: 20px 40px;
-  margin-top: 0;
 }
 
 .informations {
@@ -19,18 +18,12 @@ li {
 .list {
   width: 60vw;
 }
-.list h1 {
-  margin-right: 20px;
-  margin-left: 20px;
-}
 .price {
   width: 30vw;
   margin: 0px 60px;
-  padding-top: 70px;
+  z-index: 1;
   position: sticky;
   top: 0;
-  align-self: flex-start;
-  z-index: 1;
 }
 .price .lineFirst {
   margin: 20px 0;

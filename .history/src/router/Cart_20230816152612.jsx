@@ -25,9 +25,9 @@ export default function Cart() {
   console.log(cart);
   return (
     <>
+      <h1>장바구니</h1>
       <div className={styles.informations}>
         <div className={styles.list}>
-          <h1>장바구니</h1>
           <div className={styles.lineFirst}></div>
           {!hasProduct && <p>장바구니에 상품이 없습니다.</p>}
           {hasProduct &&

@@ -20,8 +20,7 @@ li {
   width: 60vw;
 }
 .list h1 {
-  margin-right: 20px;
-  margin-left: 20px;
+  margin: 0 20px;
 }
 .price {
   width: 30vw;
