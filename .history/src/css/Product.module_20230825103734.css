@@ -1,0 +1,31 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+.main * {
+  margin-bottom: var(--margin-small);
+}
+
+span {
+  margin-left: 5px;
+}
+
+.category {
+  font-size: var(--font-xsmall);
+  color: #909090;
+  margin-bottom: 2px;
+}
+a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  outline: 1px solid black;
+}
+
+.price {
+  margin-top: 10px;
+  /* font-size: 18px; */
+  font-weight: 500;
+}

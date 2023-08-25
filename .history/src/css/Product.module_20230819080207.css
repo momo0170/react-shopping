@@ -1,0 +1,23 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+.main * {
+  margin-bottom: var(--margin-small);
+}
+
+.category {
+  font-size: var(--font-xsmall);
+  color: #909090;
+}
+a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.name {
+  margin-top: 5px;
+}
+.price {
+  margin-top: 20px;
+}
