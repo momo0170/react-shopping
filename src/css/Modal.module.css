@@ -1,0 +1,7 @@
+.open {
+  display: block;
+  background-color: gray;
+}
+.close {
+  display: none;
+}
