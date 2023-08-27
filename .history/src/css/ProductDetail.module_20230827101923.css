@@ -80,11 +80,6 @@ p {
 .line {
   border: 0.5px solid #e0e0e0;
 }
-.optionText,
-.priceText {
-  color: #808080;
-  font-size: 15px;
-}
-.optionText {
-  padding-top: 5px;
+.text {
+  color: #606060;
 }

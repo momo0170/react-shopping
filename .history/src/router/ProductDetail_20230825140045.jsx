@@ -45,36 +45,28 @@ export default function ProductDetail() {
     <main className={styles.main}>
       <div className={styles.frame}>
         <img src={image} alt="product-image" className={styles.image} />
-        {/* 제품 정보 */}
         <section className={styles.information}>
           <div className={styles.category}>[{category}]</div>
           <div className={styles.name}>{name}</div>
-          {/* <div className={styles.description}>{description}</div> */}
+          <div className={styles.description}>{description}</div>
           <div className={styles.priceBox}>
-            <div className={styles.priceText}>판매가</div>
+            <div>판매가</div>
             <div className={styles.price}>{price.toLocaleString()}원</div>
           </div>
-
           <p className={styles.line}></p>
-
-          {/* 옵션 선택바 */}
-          <div className={styles.optionText}>옵션</div>
-          <select name="options" id="size-select" onChange={handleChange}>
-            {option &&
-              option.map((item) => (
-                <option value={item} key={item}>
-                  {item}
-                </option>
-              ))}
-          </select>
-          {isSuccess ? <p>장바구니에 추가되었습니다.</p> : null}
-
-          {/* 버튼 */}
-          <div className={styles.btns}>
+          <div>
+            <select name="options" id="size-select" onChange={handleChange}>
+              {option &&
+                option.map((item) => (
+                  <option value={item} key={item}>
+                    {item}
+                  </option>
+                ))}
+            </select>
+            {isSuccess ? <p>장바구니에 추가되었습니다.</p> : null}
             <button className={styles.addBtn} onClick={addCart}>
-              장바구니
+              장바구니에 추가
             </button>
-            <button className={styles.payBtn}>구매하기</button>
           </div>
         </section>
       </div>

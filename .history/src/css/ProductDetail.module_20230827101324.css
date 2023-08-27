@@ -11,13 +11,13 @@
 
 .image {
   width: 400px;
-  height: 600px;
+  height: 500px;
 }
 
 /* 제품 정보 */
 .information {
-  padding: calc(var(--margin-medium) * 3);
-  border: 0.5px solid #e0e0e0;
+  padding-left: calc(var(--margin-medium) * 5);
+  padding-right: calc(var(--margin-medium) * 5);
   width: 400px;
 }
 
@@ -32,7 +32,6 @@
 }
 .priceBox {
   display: flex;
-  padding-bottom: 10px;
 }
 .price {
   margin-left: 50px;
@@ -79,12 +78,4 @@ p {
 
 .line {
   border: 0.5px solid #e0e0e0;
-}
-.optionText,
-.priceText {
-  color: #808080;
-  font-size: 15px;
-}
-.optionText {
-  padding-top: 5px;
 }

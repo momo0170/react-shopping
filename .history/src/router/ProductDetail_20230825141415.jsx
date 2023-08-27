@@ -49,16 +49,15 @@ export default function ProductDetail() {
         <section className={styles.information}>
           <div className={styles.category}>[{category}]</div>
           <div className={styles.name}>{name}</div>
-          {/* <div className={styles.description}>{description}</div> */}
+          <div className={styles.description}>{description}</div>
           <div className={styles.priceBox}>
-            <div className={styles.priceText}>판매가</div>
+            <div>판매가</div>
             <div className={styles.price}>{price.toLocaleString()}원</div>
           </div>
 
           <p className={styles.line}></p>
 
           {/* 옵션 선택바 */}
-          <div className={styles.optionText}>옵션</div>
           <select name="options" id="size-select" onChange={handleChange}>
             {option &&
               option.map((item) => (
