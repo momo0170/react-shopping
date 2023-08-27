@@ -13,6 +13,8 @@ export default function Modal({
 }) {
   const { addProduct } = useProducts();
   const clickYes = () => {
+    setIsRegister(true);
+
     // 이미지 업로드
     uploadImage(file) //
       .then((url) => {

@@ -32,7 +32,7 @@ export default function Edit() {
 
   return (
     <>
-      {
+      {isClick && (
         <ModalQuestion
           isClick={isClick}
           setIsSuccess={setIsSuccess}
@@ -41,8 +41,8 @@ export default function Edit() {
           file={file}
           product={product}
         />
-      }
-      {<ModalSuccess isRegister={isRegister} setIsRegister={setIsRegister} />}
+      )}
+      {isRegister && <ModalSuccess />}
       <main className={styles.main}>
         <form onSubmit={handleSubmit} className={styles.form}>
           <span>제품 등록</span>

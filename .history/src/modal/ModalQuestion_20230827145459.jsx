@@ -13,6 +13,8 @@ export default function Modal({
 }) {
   const { addProduct } = useProducts();
   const clickYes = () => {
+    setIsRegister(true);
+
     // 이미지 업로드
     uploadImage(file) //
       .then((url) => {
@@ -29,9 +31,7 @@ export default function Modal({
           }
         );
       })
-      .then(() => {
-        setIsRegister(true);
-      }); // true를 만ㄷ르어서 ModalSuccess 컴포넌트 트리거
+      .then(() => setIsRegister(true)); // true를 만ㄷ르어서 확인 모달창 트리거
   };
   return (
     <div className={isClick ? styles.open : styles.close}>

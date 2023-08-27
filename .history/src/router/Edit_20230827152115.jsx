@@ -42,7 +42,7 @@ export default function Edit() {
           product={product}
         />
       }
-      {<ModalSuccess isRegister={isRegister} setIsRegister={setIsRegister} />}
+      {isRegister && <ModalSuccess setIsRegister={setIsRegister} />}
       <main className={styles.main}>
         <form onSubmit={handleSubmit} className={styles.form}>
           <span>제품 등록</span>

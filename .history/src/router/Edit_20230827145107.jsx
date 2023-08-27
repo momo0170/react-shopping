@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../css/Edit.module.css';
 import ModalQuestion from '../modal/ModalQuestion';
-import ModalSuccess from '../modal/ModalSuccess';
 
 export default function Edit() {
   const navigate = useNavigate();
@@ -32,7 +31,7 @@ export default function Edit() {
 
   return (
     <>
-      {
+      {isClick && (
         <ModalQuestion
           isClick={isClick}
           setIsSuccess={setIsSuccess}
@@ -41,8 +40,7 @@ export default function Edit() {
           file={file}
           product={product}
         />
-      }
-      {<ModalSuccess isRegister={isRegister} setIsRegister={setIsRegister} />}
+      )}
       <main className={styles.main}>
         <form onSubmit={handleSubmit} className={styles.form}>
           <span>제품 등록</span>

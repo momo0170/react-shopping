@@ -13,6 +13,8 @@ export default function Modal({
 }) {
   const { addProduct } = useProducts();
   const clickYes = () => {
+    setIsRegister(true);
+
     // 이미지 업로드
     uploadImage(file) //
       .then((url) => {
@@ -22,16 +24,13 @@ export default function Modal({
           {
             onSuccess: () => {
               console.log('추가');
-              setIsClick(false);
               // setIsSuccess(true); // isSuccess가 true가 되면서 화면에 "성공적으로 추가되었다"는 표시를 함.
-              // setTimeout(() => , 0); // 2초 후에 false로 변경 후 화면에서 표시되지 않게 함.
+              setTimeout(() => setIsClick(false), 0); // 2초 후에 false로 변경 후 화면에서 표시되지 않게 함.
             },
           }
         );
       })
-      .then(() => {
-        setIsRegister(true);
-      }); // true를 만ㄷ르어서 ModalSuccess 컴포넌트 트리거
+      .then(() => setIsRegister(false));
   };
   return (
     <div className={isClick ? styles.open : styles.close}>
