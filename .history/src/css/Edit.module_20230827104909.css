@@ -48,7 +48,6 @@ form span {
 .upload {
   display: none;
 }
-
 .label {
   background-color: black;
   padding: var(--margin-medium);
@@ -61,7 +60,7 @@ form span {
 .inputs {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  margin-left: var(--margin-medium);
 }
 
 .name,
@@ -70,9 +69,10 @@ form span {
 .description,
 .option {
   border: none;
-  height: 25px;
-  margin-bottom: var(--margin-large);
-  border-bottom: 1px solid #e0e0e0;
+  width: 200px;
+  height: 30px;
+  margin-bottom: var(--margin-medium);
+  border-bottom: 1px solid #c0c0c0;
   padding-left: var(--margin-small);
 }
 
@@ -82,35 +82,25 @@ form span {
 .description:focus,
 .option:focus {
   outline: none;
-  border-bottom: 1px solid black;
-}
-
-.name::placeholder,
-.price::placeholder,
-.category::placeholder,
-.description::placeholder,
-.option::placeholder {
-  color: #c0c0c0;
 }
 
 /* 버튼 */
-.buttons {
-  display: flex;
-  justify-content: space-between;
-}
-.registerBtn,
-.goToHomeBtn {
+.register,
+.goToHome {
   background-color: black;
   border: none;
-  border-radius: 0;
+  border-radius: 4px;
   padding: var(--margin-medium) var(--margin-xlarge);
   margin: var(--margin-small);
   color: white;
   cursor: pointer;
-  flex: 1 1 45%;
 }
-.goToHomeBtn {
+.inputs div {
+  display: flex;
+  justify-content: space-around;
+}
+.goToHome {
   background-color: white;
-  border: 1px solid #c0c0c0;
+  border: 1px solid black;
   color: black;
 }

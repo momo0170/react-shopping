@@ -48,7 +48,6 @@ form span {
 .upload {
   display: none;
 }
-
 .label {
   background-color: black;
   padding: var(--margin-medium);
@@ -90,7 +89,7 @@ form span {
 .category::placeholder,
 .description::placeholder,
 .option::placeholder {
-  color: #c0c0c0;
+  color: #e0e0e0;
 }
 
 /* 버튼 */

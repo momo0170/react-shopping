@@ -48,7 +48,6 @@ form span {
 .upload {
   display: none;
 }
-
 .label {
   background-color: black;
   padding: var(--margin-medium);
@@ -72,7 +71,7 @@ form span {
   border: none;
   height: 25px;
   margin-bottom: var(--margin-large);
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #c0c0c0;
   padding-left: var(--margin-small);
 }
 
@@ -85,14 +84,6 @@ form span {
   border-bottom: 1px solid black;
 }
 
-.name::placeholder,
-.price::placeholder,
-.category::placeholder,
-.description::placeholder,
-.option::placeholder {
-  color: #c0c0c0;
-}
-
 /* 버튼 */
 .buttons {
   display: flex;
@@ -102,15 +93,13 @@ form span {
 .goToHomeBtn {
   background-color: black;
   border: none;
-  border-radius: 0;
   padding: var(--margin-medium) var(--margin-xlarge);
   margin: var(--margin-small);
   color: white;
   cursor: pointer;
-  flex: 1 1 45%;
 }
 .goToHomeBtn {
   background-color: white;
-  border: 1px solid #c0c0c0;
-  color: black;
+  border: 1px solid black;
+  color: b#c0c0c0;
 }

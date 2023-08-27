@@ -48,7 +48,6 @@ form span {
 .upload {
   display: none;
 }
-
 .label {
   background-color: black;
   padding: var(--margin-medium);
@@ -62,6 +61,9 @@ form span {
   display: flex;
   flex-direction: column;
   width: 80%;
+}
+.inputs::placeholder {
+  color: #e0e0e0;
 }
 
 .name,
@@ -83,14 +85,6 @@ form span {
 .option:focus {
   outline: none;
   border-bottom: 1px solid black;
-}
-
-.name::placeholder,
-.price::placeholder,
-.category::placeholder,
-.description::placeholder,
-.option::placeholder {
-  color: #c0c0c0;
 }
 
 /* 버튼 */

@@ -44,11 +44,13 @@ form span {
   background-color: transparent;
   width: 300px;
 }
+.imageName::placeholder {
+  color: #c0c0c0;
+}
 
 .upload {
   display: none;
 }
-
 .label {
   background-color: black;
   padding: var(--margin-medium);

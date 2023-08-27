@@ -48,7 +48,6 @@ form span {
 .upload {
   display: none;
 }
-
 .label {
   background-color: black;
   padding: var(--margin-medium);
@@ -83,14 +82,6 @@ form span {
 .option:focus {
   outline: none;
   border-bottom: 1px solid black;
-}
-
-.name::placeholder,
-.price::placeholder,
-.category::placeholder,
-.description::placeholder,
-.option::placeholder {
-  color: #c0c0c0;
 }
 
 /* 버튼 */

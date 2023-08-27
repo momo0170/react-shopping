@@ -123,14 +123,14 @@ export default function Edit() {
             className={styles.option}
           />
 
-          <div className={styles.buttons}>
-            <button type="submit" className={styles.registerBtn}>
+          <div>
+            <button type="submit" className={styles.register}>
               {isRegister ? '등록 중...' : '등록'}
             </button>
             <button
               type="button"
               onClick={goToHome}
-              className={styles.goToHomeBtn}
+              className={styles.goToHome}
             >
               메인
             </button>
