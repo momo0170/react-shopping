@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { uploadImage } from '../api/imageUpload';
 import { useNavigate } from 'react-router-dom';
+
 import styles from '../css/Edit.module.css';
-import ModalQuestion from '../modal/ModalQuestion';
+import useProducts from '../hooks/useProducts';
+import Modal from '../modal/Modal';
 
 export default function Edit() {
   const navigate = useNavigate();
@@ -9,7 +12,6 @@ export default function Edit() {
   const [file, setFile] = useState();
   const [isRegister, setIsRegister] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-
   const [isClick, setIsClick] = useState(false);
 
   const goToHome = () => {
@@ -23,24 +25,39 @@ export default function Edit() {
     setProduct({ ...product, [e.target.name]: e.target.value });
   };
 
-  // 등록하기 버튼 클릭
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const { addProduct } = useProducts();
+
+  // // 모달창 클릭시
+  // const clickModal = (e) => {
+  //   e.preventDefault();
+  //   setIsRegister(true);
+
+  //   // 이미지 업로드
+  //   uploadImage(file) //
+  //     .then((url) => {
+  //       // mutate 실행
+  //       addProduct.mutate(
+  //         { product, url },
+  //         {
+  //           onSuccess: () => {
+  //             console.log('추가');
+  //             setIsSuccess(true); // isSuccess가 true가 되면서 화면에 "성공적으로 추가되었다"는 표시를 함.
+  //             setTimeout(() => setIsSuccess(false), 2000); // 2초 후에 false로 변경 후 화면에서 표시되지 않게 함.
+  //           },
+  //         }
+  //       );
+  //     })
+  //     .then(() => setIsRegister(false));
+  // };
+
+  // 등록하기 클릭시
+  const handleSubmit = () => {
     setIsClick(!isClick);
   };
 
   return (
     <>
-      {isClick && (
-        <ModalQuestion
-          isClick={isClick}
-          setIsSuccess={setIsSuccess}
-          setIsRegister={setIsRegister}
-          setIsClick={setIsClick}
-          file={file}
-          product={product}
-        />
-      )}
+      <Modal isClick={isClick} />
       <main className={styles.main}>
         <form onSubmit={handleSubmit} className={styles.form}>
           <span>제품 등록</span>

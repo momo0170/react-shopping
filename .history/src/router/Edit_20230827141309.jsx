@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 import styles from '../css/Edit.module.css';
-import ModalQuestion from '../modal/ModalQuestion';
+import Modal from '../modal/Modal';
 
 export default function Edit() {
   const navigate = useNavigate();
@@ -23,7 +24,13 @@ export default function Edit() {
     setProduct({ ...product, [e.target.name]: e.target.value });
   };
 
-  // 등록하기 버튼 클릭
+  // // 모달창 클릭시
+  // const clickModal = (e) => {
+  //   e.preventDefault();
+
+  // };
+
+  // 등록하기 클릭시
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsClick(!isClick);
@@ -31,16 +38,13 @@ export default function Edit() {
 
   return (
     <>
-      {isClick && (
-        <ModalQuestion
-          isClick={isClick}
-          setIsSuccess={setIsSuccess}
-          setIsRegister={setIsRegister}
-          setIsClick={setIsClick}
-          file={file}
-          product={product}
-        />
-      )}
+      <Modal
+        isClick={isClick}
+        setIsSuccess={setIsSuccess}
+        setIsRegister={setIsRegister}
+        file={file}
+        product={product}
+      />
       <main className={styles.main}>
         <form onSubmit={handleSubmit} className={styles.form}>
           <span>제품 등록</span>

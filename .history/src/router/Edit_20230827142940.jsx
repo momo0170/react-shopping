@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../css/Edit.module.css';
-import ModalQuestion from '../modal/ModalQuestion';
+import Modal from '../modal/ModalQuestion';
 
 export default function Edit() {
   const navigate = useNavigate();
@@ -22,6 +22,12 @@ export default function Edit() {
   const handleDataChange = (e) => {
     setProduct({ ...product, [e.target.name]: e.target.value });
   };
+
+  // // 모달창 클릭시
+  // const clickModal = (e) => {
+  //   e.preventDefault();
+
+  // };
 
   // 등록하기 버튼 클릭
   const handleSubmit = (e) => {

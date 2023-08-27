@@ -23,6 +23,12 @@ export default function Edit() {
     setProduct({ ...product, [e.target.name]: e.target.value });
   };
 
+  // // 모달창 클릭시
+  // const clickModal = (e) => {
+  //   e.preventDefault();
+
+  // };
+
   // 등록하기 버튼 클릭
   const handleSubmit = (e) => {
     e.preventDefault();
