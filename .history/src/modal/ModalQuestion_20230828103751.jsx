@@ -6,6 +6,7 @@ import useProducts from '../hooks/useProducts';
 export default function Modal({
   isClick,
   setIsClick,
+  setIsSuccess,
   setIsRegister,
   file,
   product,
@@ -22,6 +23,8 @@ export default function Modal({
             onSuccess: () => {
               console.log('추가');
               setIsClick(false);
+              // setIsSuccess(true); // isSuccess가 true가 되면서 화면에 "성공적으로 추가되었다"는 표시를 함.
+              // setTimeout(() => , 0); // 2초 후에 false로 변경 후 화면에서 표시되지 않게 함.
             },
           }
         );
@@ -31,15 +34,11 @@ export default function Modal({
       }); // true를 만ㄷ르어서 ModalSuccess 컴포넌트 트리거
   };
   return (
-    <div className={`${isClick ? styles.open : styles.close}`}>
-      <span className={styles.question}>제품을 등록하시겠습니까?</span>
-      <div className={styles.buttons}>
-        <button onClick={() => setIsClick(false)} className={styles.no}>
-          아니요
-        </button>
-        <button onClick={clickYes} className={styles.yes}>
-          예
-        </button>
+    <div className={isClick ? styles.open : styles.close}>
+      <span>제품을 등록하시겠습니까?</span>
+      <div>
+        <button onClick={() => setIsClick(false)}>아니요</button>
+        <button onClick={clickYes}>예</button>
       </div>
     </div>
   );

@@ -3,25 +3,36 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: white;
-  border: 1px solid #c0c0c0;
   position: absolute;
+  background-color: white;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border: 1px solid #c0c0c0;
   padding: var(--margin-medium);
   width: 250px;
-  height: 60px;
+  height: 90px;
 }
 .close {
   display: none;
 }
 
-.btn {
-  border: 1px solid #c0c0c0;
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: var(--margin-medium);
+  width: 100%;
+}
+.yes,
+.no {
   border-radius: 0;
   padding: 5px 10px;
   width: 30%;
+}
+.yes {
   background-color: black;
   color: white;
+}
+.no {
+  border: 1px solid #c0c0c0;
 }

@@ -1,0 +1,18 @@
+.open {
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  padding: var(--margin-medium);
+  z-index: 2;
+}
+.close {
+  display: none;
+}
+
+.yes,
+.no {
+  border-radius: 0;
+}

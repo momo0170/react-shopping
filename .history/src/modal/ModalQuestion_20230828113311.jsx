@@ -31,15 +31,17 @@ export default function Modal({
       }); // true를 만ㄷ르어서 ModalSuccess 컴포넌트 트리거
   };
   return (
-    <div className={`${isClick ? styles.open : styles.close}`}>
-      <span className={styles.question}>제품을 등록하시겠습니까?</span>
-      <div className={styles.buttons}>
-        <button onClick={() => setIsClick(false)} className={styles.no}>
-          아니요
-        </button>
-        <button onClick={clickYes} className={styles.yes}>
-          예
-        </button>
+    <div>
+      <div className={`${isClick ? styles.open : styles.close}`}>
+        <span className={styles.question}>제품을 등록하시겠습니까?</span>
+        <div className={styles.buttons}>
+          <button onClick={() => setIsClick(false)} className={styles.no}>
+            아니요
+          </button>
+          <button onClick={clickYes} className={styles.yes}>
+            예
+          </button>
+        </div>
       </div>
     </div>
   );

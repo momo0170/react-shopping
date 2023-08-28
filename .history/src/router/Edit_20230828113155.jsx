@@ -33,6 +33,7 @@ export default function Edit() {
       {
         <ModalQuestion
           isClick={isClick}
+          setIsSuccess={setIsSuccess}
           setIsRegister={setIsRegister}
           setIsClick={setIsClick}
           file={file}

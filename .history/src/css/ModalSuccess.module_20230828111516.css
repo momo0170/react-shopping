@@ -9,9 +9,8 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: var(--margin-medium);
   width: 250px;
-  height: 60px;
+  height: 80px;
 }
 .close {
   display: none;

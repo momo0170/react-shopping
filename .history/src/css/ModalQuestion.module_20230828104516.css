@@ -1,0 +1,20 @@
+.open {
+  display: block;
+  position: absolute;
+  background-color: white;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  padding: var(--margin-medium);
+  width: 250px;
+  height: 80px;
+}
+.close {
+  display: none;
+}
+
+.yes,
+.no {
+  border-radius: 0;
+}

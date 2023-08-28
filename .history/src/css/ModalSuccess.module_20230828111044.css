@@ -1,17 +1,11 @@
 .open {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  display: block;
   background-color: white;
   border: 1px solid #c0c0c0;
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: var(--margin-medium);
-  width: 250px;
-  height: 60px;
 }
 .close {
   display: none;

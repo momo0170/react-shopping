@@ -1,0 +1,12 @@
+.open {
+  display: block;
+  background-color: white;
+  border: 1px solid #c0c0c0
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.close {
+  display: none;
+}

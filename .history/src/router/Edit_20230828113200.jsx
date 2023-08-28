@@ -9,6 +9,8 @@ export default function Edit() {
   const [product, setProduct] = useState({});
   const [file, setFile] = useState();
   const [isRegister, setIsRegister] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
   const [isClick, setIsClick] = useState(false);
 
   const goToHome = () => {
@@ -33,6 +35,7 @@ export default function Edit() {
       {
         <ModalQuestion
           isClick={isClick}
+          setIsSuccess={setIsSuccess}
           setIsRegister={setIsRegister}
           setIsClick={setIsClick}
           file={file}

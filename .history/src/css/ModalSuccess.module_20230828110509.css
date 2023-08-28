@@ -1,0 +1,11 @@
+.open {
+  display: block;
+  background-color: white;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.close {
+  display: none;
+}

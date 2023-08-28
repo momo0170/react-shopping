@@ -11,7 +11,7 @@
   transform: translate(-50%, -50%);
   padding: var(--margin-medium);
   width: 250px;
-  height: 60px;
+  height: 70px;
 }
 .close {
   display: none;
