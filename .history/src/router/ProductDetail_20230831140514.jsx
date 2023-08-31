@@ -67,6 +67,9 @@ export default function ProductDetail() {
                 </option>
               ))}
           </select>
+          {isSuccess ? (
+            <p className={styles.message}>장바구니에 추가되었습니다.</p>
+          ) : null}
 
           {/* 버튼 */}
           <div className={styles.btns}>
@@ -75,10 +78,6 @@ export default function ProductDetail() {
             </button>
             <button className={styles.payBtn}>구매하기</button>
           </div>
-
-          {isSuccess ? (
-            <p className={styles.message}>장바구니에 추가되었습니다.</p>
-          ) : null}
         </section>
       </div>
     </main>

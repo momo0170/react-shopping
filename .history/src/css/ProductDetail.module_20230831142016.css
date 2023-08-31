@@ -87,5 +87,6 @@ select {
 }
 
 .message {
+  color: blue;
   font-size: var(--font-small);
 }
