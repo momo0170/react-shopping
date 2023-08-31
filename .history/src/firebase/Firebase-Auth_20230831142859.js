@@ -76,8 +76,7 @@ async function readData(user) {
 
 // 데이터 베이스 쓰기
 export async function writeData(data, imgUrl) {
-  const id = uuid4();
-  set(ref(db, `products/${id}`), {
+  set(ref(db, `products/${data.id}`), {
     ...data,
     id: id,
     image: imgUrl,
@@ -114,8 +113,8 @@ export async function getCartData(uid) {
   return get(ref(db, `cart/${uid}`)) //
     .then((snapshot) => {
       if (snapshot.exists()) {
-        const item = snapshot.val() || {};
-        return Object.values(item);
+        const item = Object.values(snapshot.val());
+        return item;
       }
     });
 }
