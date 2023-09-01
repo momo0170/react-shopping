@@ -20,9 +20,6 @@ export default function Products() {
   console.log(products);
 
   const filterProduct = (products) => {
-    if (filter === '모두') {
-      return products;
-    }
     const result = products.filter((item) => {
       return item.category === filter;
     });
@@ -34,7 +31,6 @@ export default function Products() {
       <div>
         <button onClick={() => setFilter('남성')}>남성</button>
         <button onClick={() => setFilter('여성')}>여성</button>
-        <button onClick={() => setFilter('모두')}>전체</button>
       </div>
       <div className={styles.frame}>
         <ul>

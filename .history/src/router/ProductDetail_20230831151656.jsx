@@ -23,7 +23,7 @@ export default function ProductDetail() {
   const handleChange = (e) => {
     setCart({ ...cart, selectedOpt: e.target.value });
   };
-
+  console.log(cart);
   const { addtoCart } = useCart();
 
   // mutate 실행, "장바구니 추가" 버튼을 클릭 시

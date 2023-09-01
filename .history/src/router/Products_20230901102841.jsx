@@ -18,27 +18,21 @@ export default function Products() {
   }
   console.log(filter);
   console.log(products);
-
-  const filterProduct = (products) => {
-    if (filter === '모두') {
-      return products;
-    }
-    const result = products.filter((item) => {
-      return item.category === filter;
-    });
-    console.log(result);
-    return result;
-  };
   return (
     <>
       <div>
         <button onClick={() => setFilter('남성')}>남성</button>
         <button onClick={() => setFilter('여성')}>여성</button>
-        <button onClick={() => setFilter('모두')}>전체</button>
       </div>
       <div className={styles.frame}>
         <ul>
-          <Product products={filterProduct(products)} />
+          {products && filter === '모두'
+            ? products.map((product) => (
+                <Product key={product.id} product={product} />
+              ))
+            : products.filter((product) => {
+                product.category === filter;
+              })}
         </ul>
       </div>
     </>

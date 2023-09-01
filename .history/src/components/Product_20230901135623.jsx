@@ -9,12 +9,7 @@ export default function Product({ products }) {
     <>
       {products &&
         products.map((product) => (
-          <Link
-            className={styles.main}
-            to={`product/${id}`}
-            state={product}
-            key={product.id}
-          >
+          <Link className={styles.main} to={`product/${id}`} state={product}>
             <img
               src={product.image}
               alt="productproduct."
