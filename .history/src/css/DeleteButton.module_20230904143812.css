@@ -1,0 +1,13 @@
+.deleteBtn {
+  outline: 0;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--red);
+  color: white;
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  top: 0;
+}

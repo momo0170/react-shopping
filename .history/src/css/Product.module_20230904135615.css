@@ -1,0 +1,44 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+.main * {
+  margin-bottom: var(--margin-small);
+}
+
+span {
+  margin-left: 5px;
+}
+
+.category {
+  font-size: var(--font-xsmall);
+  color: #909090;
+  margin-bottom: 2px;
+}
+a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  outline: 2px solid #f1ede9;
+}
+
+.price {
+  margin-top: 10px;
+  /* font-size: 18px; */
+  font-weight: 500;
+}
+
+.frame {
+  position: relative;
+}
+.deleteBtn {
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  top: 0;
+  width: 30px;
+  height: 30px;
+}
