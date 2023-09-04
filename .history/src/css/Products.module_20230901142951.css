@@ -1,0 +1,32 @@
+.frame {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  width: 80%;
+  padding: 0;
+  margin-left: var(--margin-medium);
+  margin-right: var(--margin-medium);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 50px 30px;
+}
+
+.filterBar {
+  display: flex;
+  justify-content: center;
+}
+.btns {
+  margin: var(--margin-large);
+}
+
+.man,
+.woman,
+.all {
+  padding: var(--margin-medium) calc(var(--margin-xlarge) * 2);
+  margin: 10px;
+  cursor: pointer;
+  border: 0;
+  background-color: beige;
+}

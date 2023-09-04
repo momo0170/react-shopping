@@ -1,0 +1,16 @@
+.all,
+.man,
+.woman {
+  padding: var(--margin-medium) calc(var(--margin-xlarge) * 2);
+  margin: 10px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 20px;
+  background-color: #f5f5f5;
+}
+
+.all,
+.select {
+  background-color: black;
+  color: white;
+}
