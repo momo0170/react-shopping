@@ -1,0 +1,18 @@
+.active {
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  top: 0;
+  transition: all 1s;
+  opacity: 1;
+}
+.inactive {
+  opacity: 0;
+  /* position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  top: 0;
+  transition: all 1s; */
+}

@@ -7,7 +7,7 @@ import { DeleteMode } from '../context/DeleteModeContext';
 
 export default function Product({ products }) {
   const { isActive } = useContext(DeleteMode);
-  console.log(isActive);
+
   return (
     <>
       {products &&
@@ -30,7 +30,12 @@ export default function Product({ products }) {
                 {product.price.toLocaleString()}원
               </span>
             </Link>
-            <DeleteButton id={product.id} />
+            {isActive ? (
+              <DeleteButton
+                className={isActive ? styles.active : ''}
+                id={product.id}
+              />
+            ) : null}
           </div>
         ))}
     </>

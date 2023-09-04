@@ -20,6 +20,7 @@ export default function DeleteButton({ id }) {
     <>
       <TiDelete
         className={isActive ? styles.active : styles.inactive}
+        // className={styles.deleteBtn}
         onClick={productDelete}
         color="#e20000"
         size="30"

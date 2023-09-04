@@ -5,7 +5,7 @@
   z-index: 2;
   transform: translate(-50%, -50%);
   top: 0;
-  animation: inactive 250ms ease-in-out;
+  animation: inactive 250ms ease-in;
 }
 .active {
   position: absolute;
@@ -14,7 +14,7 @@
   transform: translate(-50%, -50%);
   top: 0;
   opacity: 1;
-  animation: active 250ms ease-in-out;
+  animation: active 250ms ease-in;
 }
 @keyframes active {
   from {
