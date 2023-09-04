@@ -33,8 +33,7 @@ header {
   margin: var(--margin-medium);
 }
 .cart,
-.edit,
-.delete {
+.edit {
   display: flex;
   align-items: center;
   border: none;

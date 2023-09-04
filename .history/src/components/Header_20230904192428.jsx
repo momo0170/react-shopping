@@ -53,7 +53,7 @@ export default function Header() {
           </div>
         </div>
         <div className={styles.menu}>
-          {/* 등록, 삭제 버튼 */}
+          {/* 등록 */}
           {user ? (
             user.isAdmin ? (
               <>

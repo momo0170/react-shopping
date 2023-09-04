@@ -53,29 +53,20 @@ export default function Header() {
           </div>
         </div>
         <div className={styles.menu}>
-          {/* 등록, 삭제 버튼 */}
+          {/* 편집 */}
           {user ? (
             user.isAdmin ? (
-              <>
-                <button className={styles.edit} onClick={goToEdit}>
-                  <div className={styles.editIcon}>
-                    <RiEditBoxLine size="20" />
-                  </div>
-                  <span className={styles.editText}>등록</span>
-                </button>
-                <button
-                  className={styles.delete}
-                  onClick={() => setIsActive(!isActive)}
-                >
-                  <div className={styles.deleteIcon}>
-                    <TiDeleteOutline size="20" />
-                  </div>
-                  <span className={styles.deleteText}>삭제</span>
-                </button>
-              </>
+              <button className={styles.edit} onClick={goToEdit}>
+                <div className={styles.editIcon}>
+                  <RiEditBoxLine size="20" />
+                </div>
+                <span className={styles.editText}>등록</span>
+              </button>
             ) : null
           ) : null}
-
+          <button onClick={() => setIsActive(!isActive)}>
+            <span>삭제</span>
+          </button>
           {/* 장바구니 */}
           {user && (
             <button className={styles.cart} onClick={goToCart}>

@@ -53,7 +53,7 @@ export default function Header() {
           </div>
         </div>
         <div className={styles.menu}>
-          {/* 등록, 삭제 버튼 */}
+          {/* 등록 */}
           {user ? (
             user.isAdmin ? (
               <>
@@ -64,12 +64,10 @@ export default function Header() {
                   <span className={styles.editText}>등록</span>
                 </button>
                 <button
-                  className={styles.delete}
+                  className={styles.deleteIcon}
                   onClick={() => setIsActive(!isActive)}
                 >
-                  <div className={styles.deleteIcon}>
-                    <TiDeleteOutline size="20" />
-                  </div>
+                  <TiDeleteOutline />
                   <span className={styles.deleteText}>삭제</span>
                 </button>
               </>
