@@ -9,7 +9,7 @@ export default function useProducts() {
   const queryClient = useQueryClient();
 
   // query에서 데이터를 받아옴
-  const productsQuery = useQuery(['products'], getData);
+  const productsQuery = useQuery(['products'], getData); // 1분 뒤에 stale로 표기됨
 
   // mutation 정의
   const addProduct = useMutation(
@@ -18,8 +18,10 @@ export default function useProducts() {
       writeData(product, url); // 제품 등록
     },
     {
+      // 성공적으로 제품이 등록되면
       // [products] 키를 가진 캐시 데이터 새로고침
       onSuccess: () => {
+        console.log('mutate 성공적');
         queryClient.invalidateQueries(['products']);
       },
     }

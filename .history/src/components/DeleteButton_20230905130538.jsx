@@ -7,6 +7,7 @@ import { DeleteMode } from '../context/DeleteModeContext';
 export default function DeleteButton({ id }) {
   const { deleteProduct } = useProducts();
   const { isActive } = useContext(DeleteMode);
+
   const productDelete = () => {
     // 데이터 베이스에서 제품 삭제
     deleteProduct.mutate(id, {
@@ -15,15 +16,14 @@ export default function DeleteButton({ id }) {
       },
     });
   };
-
   return (
-    <>
+    <button {isActive && 'disabled'}>
       <TiDelete
         className={isActive ? styles.active : styles.inactive}
         onClick={productDelete}
         color="#e20000"
         size="30"
       />
-    </>
+    </button>
   );
 }

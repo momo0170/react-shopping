@@ -14,16 +14,20 @@
   transform: translate(-50%, -50%);
   top: 0;
   animation: active 250ms ease-in-out;
+  opacity: 1;
 }
-
 @keyframes active {
   from {
-    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
 @keyframes inactive {
-  100% {
+  from {
+  }
+  to {
     opacity: 0;
   }
 }

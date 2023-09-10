@@ -76,10 +76,9 @@ async function readData(user) {
 
 // 데이터 베이스 쓰기
 export async function writeData(data, imgUrl) {
-  const id = uuid4();
-  set(ref(db, `products/${id}`), {
+  set(ref(db, `products/${data.id}`), {
     ...data,
-    id: id,
+    id: data.id,
     image: imgUrl,
     price: parseInt(data.price),
     option: data.option.split(','),

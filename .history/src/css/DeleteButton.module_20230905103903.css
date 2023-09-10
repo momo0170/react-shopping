@@ -5,7 +5,6 @@
   transform: translate(-50%, -50%);
   top: 0;
   animation: inactive 250ms ease-in-out;
-  opacity: 0;
 }
 .active {
   position: absolute;
@@ -15,15 +14,20 @@
   top: 0;
   animation: active 250ms ease-in-out;
 }
-
 @keyframes active {
   from {
     opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes inactive {
-  100% {
+  from {
+    opacity: 1;
+  }
+  to {
     opacity: 0;
   }
 }

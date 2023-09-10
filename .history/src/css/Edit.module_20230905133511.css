@@ -34,6 +34,14 @@ form span {
   height: 200px;
   animation: image 1s ease-in-out;
 }
+@keyframes image {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 /* 파일 업로드  */
 .fileBox {

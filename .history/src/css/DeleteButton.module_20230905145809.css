@@ -13,17 +13,4 @@
   z-index: 2;
   transform: translate(-50%, -50%);
   top: 0;
-  animation: active 250ms ease-in-out;
-}
-
-@keyframes active {
-  from {
-    opacity: 0;
-  }
-}
-
-@keyframes inactive {
-  100% {
-    opacity: 0;
-  }
 }

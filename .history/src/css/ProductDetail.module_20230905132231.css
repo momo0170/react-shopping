@@ -73,7 +73,6 @@ select {
 }
 .addBtn {
   border: 1px solid #c0c0c0;
-  background-color: white;
 }
 
 .line {
@@ -90,18 +89,14 @@ select {
 
 .message {
   font-size: var(--font-small);
-  animation: message 2s ease-in-out;
-  opacity: 0;
+  animation: message 1s ease-in-out;
 }
 
 @keyframes message {
-  0% {
+  from {
     opacity: 0;
   }
-  50% {
+  to {
     opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }

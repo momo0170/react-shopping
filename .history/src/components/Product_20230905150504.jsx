@@ -9,6 +9,16 @@ export default function Product({ products }) {
     <>
       {products &&
         products.map((product) => (
+          {
+            const productDelete = () => {
+              // 데이터 베이스에서 제품 삭제
+              deleteProduct.mutate(id, {
+                onSuccess: () => {
+                  console.log('제품이 성공적으로 제거되었습니다.');
+                },
+              });
+            };
+          }
           <div className={styles.frame} key={uuid4()}>
             <Link
               className={styles.main}
@@ -27,7 +37,10 @@ export default function Product({ products }) {
                 {product.price.toLocaleString()}원
               </span>
             </Link>
-            <DeleteButton id={product.id} />
+            {/* <DeleteButton id={product.id} /> */}
+            <button>
+
+            </button>
           </div>
         ))}
     </>

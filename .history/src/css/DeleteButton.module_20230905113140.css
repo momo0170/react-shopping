@@ -4,7 +4,7 @@
   z-index: 2;
   transform: translate(-50%, -50%);
   top: 0;
-  animation: inactive 250ms ease-in-out;
+  /* animation: inactive 250ms ease-in-out alternate; */
   opacity: 0;
 }
 .active {
@@ -13,16 +13,22 @@
   z-index: 2;
   transform: translate(-50%, -50%);
   top: 0;
-  animation: active 250ms ease-in-out;
+  /* animation: active 250ms ease-in-out alternate; */
+  opacity: 1;
 }
-
 @keyframes active {
   from {
     opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes inactive {
+  0% {
+    opacity: 1;
+  }
   100% {
     opacity: 0;
   }

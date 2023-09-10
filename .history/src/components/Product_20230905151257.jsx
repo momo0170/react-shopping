@@ -27,7 +27,10 @@ export default function Product({ products }) {
                 {product.price.toLocaleString()}원
               </span>
             </Link>
-            <DeleteButton id={product.id} />
+            {/* <DeleteButton id={product.id} /> */}
+            <button>
+              <div>X</div>
+            </button>
           </div>
         ))}
     </>

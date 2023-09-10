@@ -3,6 +3,7 @@ import styles from '../css/Product.module.css';
 import { Link } from 'react-router-dom';
 import uuid4 from 'uuid4';
 import DeleteButton from './DeleteButton';
+import { DeleteMode } from '../context/DeleteModeContext';
 
 export default function Product({ products }) {
   return (

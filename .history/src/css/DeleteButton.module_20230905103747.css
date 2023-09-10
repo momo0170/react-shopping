@@ -1,11 +1,11 @@
 .inactive {
+  opacity: 0;
   position: absolute;
   cursor: pointer;
   z-index: 2;
   transform: translate(-50%, -50%);
   top: 0;
   animation: inactive 250ms ease-in-out;
-  opacity: 0;
 }
 .active {
   position: absolute;
@@ -13,17 +13,22 @@
   z-index: 2;
   transform: translate(-50%, -50%);
   top: 0;
+  opacity: 1;
   animation: active 250ms ease-in-out;
 }
-
 @keyframes active {
   from {
     opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes inactive {
-  100% {
+  from {
+  }
+  to {
     opacity: 0;
   }
 }

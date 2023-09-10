@@ -9,6 +9,8 @@ export default function Product({ products }) {
     <>
       {products &&
         products.map((product) => (
+          
+          <>
           <div className={styles.frame} key={uuid4()}>
             <Link
               className={styles.main}
@@ -27,7 +29,11 @@ export default function Product({ products }) {
                 {product.price.toLocaleString()}원
               </span>
             </Link>
-            <DeleteButton id={product.id} />
+            {/* <DeleteButton id={product.id} /> */}
+            <button>
+
+            </button>
+          </>
           </div>
         ))}
     </>
