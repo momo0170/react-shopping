@@ -12,18 +12,7 @@ li {
   margin-top: 0;
 }
 .noProduct {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.noProduct button {
-  margin-bottom: var(--margin-xlarge);
-  border: none;
-  border: 1px solid #c0c0c0;
-  background-color: white;
-  padding: var(--margin-medium);
-  cursor: pointer;
+  margin: auto 0;
 }
 .informations {
   display: flex;

@@ -7,7 +7,6 @@ export default function CartStatus() {
     cartProduct: { data: products },
   } = useCart();
   console.log(products);
-
   return (
     <div className={styles.frame}>
       {products && (

@@ -5,14 +5,9 @@ import styles from '../css/Cart.module.css';
 import useCart from '../hooks/useCart';
 import Payment from '../components/Payment';
 import uuid4 from 'uuid4';
-import { useNavigate } from 'react-router-dom';
 
 const SHIPPING = 3000;
 export default function Cart() {
-  const navigate = useNavigate();
-  const goToShopping = () => {
-    navigate('/');
-  };
   const {
     cartProduct: { isLoading, error, data: cart, isError },
   } = useCart();

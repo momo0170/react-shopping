@@ -21,9 +21,6 @@ li {
   margin-bottom: var(--margin-xlarge);
   border: none;
   border: 1px solid #c0c0c0;
-  background-color: white;
-  padding: var(--margin-medium);
-  cursor: pointer;
 }
 .informations {
   display: flex;

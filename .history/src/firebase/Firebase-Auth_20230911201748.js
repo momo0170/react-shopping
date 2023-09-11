@@ -122,7 +122,8 @@ export async function getCartData(uid) {
   return get(ref(db, `cart/${uid}`)) //
     .then((snapshot) => {
       if (snapshot.exists()) {
-        return Object.values(snapshot.val());
+        const item = snapshot.val();
+        return Object.values(item);
       } else {
         return [];
       }

@@ -10,9 +10,9 @@ import { useNavigate } from 'react-router-dom';
 const SHIPPING = 3000;
 export default function Cart() {
   const navigate = useNavigate();
-  const goToShopping = () => {
-    navigate('/');
-  };
+  const goToShopping () => {
+    navigate('/')
+  }
   const {
     cartProduct: { isLoading, error, data: cart, isError },
   } = useCart();
