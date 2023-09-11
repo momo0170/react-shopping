@@ -1,0 +1,54 @@
+li {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 10px;
+}
+.lineFirst,
+.lineLast {
+  border-bottom: 1px solid black;
+  margin: 20px 40px;
+  margin-top: 0;
+}
+.noProduct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.noProduct button {
+  margin-bottom: var(--margin-xlarge);
+  border: none;
+  border: 1px solid #c0c0c0;
+  background-color: white;
+  padding: var(--margin-medium);
+  cursor: pointer;
+}
+.informations {
+  display: flex;
+  height: 1000vh;
+}
+.list {
+  width: 60vw;
+}
+.list h1 {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.price {
+  width: 30vw;
+  margin: 0px 60px;
+  padding-top: 70px;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  z-index: 1;
+}
+.price .lineFirst {
+  margin: 20px 0;
+}
+.price .lineLast {
+  margin: 10px 0;
+  border-bottom: 0.5px solid black;
+}

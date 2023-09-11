@@ -3,6 +3,7 @@ import Product from '../components/Product';
 import useProducts from '../hooks/useProducts';
 import styles from '../css/Products.module.css';
 import FilterButton from '../components/FilterButton';
+import spinner from '../asset/spinner.gif';
 import Loading from '../components/Loading';
 
 export default function Products() {

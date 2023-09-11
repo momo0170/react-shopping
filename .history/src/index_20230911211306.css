@@ -1,0 +1,22 @@
+:root {
+  --margin-small: 5px;
+  --margin-medium: 10px;
+  --margin-large: 20px;
+  --margin-xlarge: 30px;
+
+  --font-min: 12px;
+  --font-xsmall: 14px;
+  --font-small: 16px;
+  --font-medium: 24px;
+  --font-large: 32px;
+  --font-xlarge: 36px;
+  --font-xxlarge: 44px;
+
+  --red: #e20000;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  height: 100vh;
+}

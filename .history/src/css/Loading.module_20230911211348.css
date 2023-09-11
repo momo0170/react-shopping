@@ -1,0 +1,7 @@
+/* 로딩 */
+.loading {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

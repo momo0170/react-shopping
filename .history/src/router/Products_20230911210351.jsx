@@ -3,7 +3,7 @@ import Product from '../components/Product';
 import useProducts from '../hooks/useProducts';
 import styles from '../css/Products.module.css';
 import FilterButton from '../components/FilterButton';
-import Loading from '../components/Loading';
+import spinner from '../asset/spinner.gif';
 
 export default function Products() {
   const filterList = ['전체', '남성', '여성'];
@@ -22,9 +22,15 @@ export default function Products() {
   };
 
   if (isLoading) {
-    return <Loading />;
+    return (
+      <div className={styles.loading}>
+        <img src={spinner} alt="로딩중" />
+        <p>잠시만 기다려주세요</p>
+      </div>
+    );
   }
 
+  console.log(products);
   return (
     <>
       {/* 필터 */}

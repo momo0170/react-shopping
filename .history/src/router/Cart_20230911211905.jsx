@@ -14,37 +14,41 @@ export default function Cart() {
     navigate('/');
   };
   const {
-    cartProduct: { data: cart },
+    cartProduct: { isLoading, data: cart },
   } = useCart();
+
+  if (isLoading) {
+    <p>loading..</p>;
+  }
 
   const hasProduct = cart && cart.length > 0; // 1개 이상 있다면
   const totalPrice =
     cart &&
     cart.reduce((prev, value) => prev + value.price * value.quantity, 0);
-
+  console.log(cart);
   return (
-    cart && (
-      <>
-        <div className={styles.informations}>
-          <div className={styles.list}>
-            <h1>장바구니</h1>
-            <div className={styles.lineFirst}></div>
-            {!hasProduct && (
-              <div className={styles.noProduct}>
-                <p>장바구니에 상품이 없습니다.</p>
-                <button onClick={goToShopping}>쇼핑하러 가기</button>
-              </div>
-            )}
-            {hasProduct &&
-              cart.map((item) => (
-                <li key={uuid4()}>
-                  <CartProduct product={item} />
-                </li>
-              ))}
-            <div className={styles.lineLast}></div>
-          </div>
+    <>
+      <div className={styles.informations}>
+        <div className={styles.list}>
+          <h1>장바구니</h1>
+          <div className={styles.lineFirst}></div>
+          {!hasProduct && (
+            <div className={styles.noProduct}>
+              <p>장바구니에 상품이 없습니다.</p>
+              <button onClick={goToShopping}>쇼핑하러 가기</button>
+            </div>
+          )}
+          {hasProduct &&
+            cart.map((item) => (
+              <li key={uuid4()}>
+                <CartProduct product={item} />
+              </li>
+            ))}
+          <div className={styles.lineLast}></div>
+        </div>
 
-          {/* 결제 내역 */}
+        {/* 결제 내역 */}
+        {cart && (
           <div className={styles.price}>
             <div className={styles.lineFirst}></div>
             <h1>결제 내역</h1>
@@ -57,8 +61,8 @@ export default function Cart() {
             />
             <Payment />
           </div>
-        </div>
-      </>
-    )
+        )}
+      </div>
+    </>
   );
 }

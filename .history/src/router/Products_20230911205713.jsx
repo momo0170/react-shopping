@@ -3,13 +3,13 @@ import Product from '../components/Product';
 import useProducts from '../hooks/useProducts';
 import styles from '../css/Products.module.css';
 import FilterButton from '../components/FilterButton';
-import Loading from '../components/Loading';
+import spinner from '../asset/spinner.gif';
 
 export default function Products() {
   const filterList = ['전체', '남성', '여성'];
   const [filter, setFilter] = useState('전체');
   const {
-    productsQuery: { isLoading, data: products },
+    productsQuery: { isLoading, error, data: products },
   } = useProducts();
 
   const filterProduct = (products) => {
@@ -22,9 +22,18 @@ export default function Products() {
   };
 
   if (isLoading) {
-    return <Loading />;
+    return (
+      <>
+        <img src={spinner} alt="로딩중" />
+        <p>Loading...</p>
+      </>
+    );
   }
-
+  if (error) {
+    return <p>에러</p>;
+  }
+  // console.log(`현재 필터 : ${filter}`);
+  console.log(products);
   return (
     <>
       {/* 필터 */}

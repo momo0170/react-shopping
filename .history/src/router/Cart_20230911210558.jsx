@@ -14,14 +14,18 @@ export default function Cart() {
     navigate('/');
   };
   const {
-    cartProduct: { data: cart },
+    cartProduct: { isLoading, data: cart },
   } = useCart();
+
+  if (isLoading) {
+    <p>loading..</p>;
+  }
 
   const hasProduct = cart && cart.length > 0; // 1개 이상 있다면
   const totalPrice =
     cart &&
     cart.reduce((prev, value) => prev + value.price * value.quantity, 0);
-
+  console.log(cart);
   return (
     cart && (
       <>

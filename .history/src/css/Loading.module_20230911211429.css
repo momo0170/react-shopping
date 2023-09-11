@@ -1,0 +1,9 @@
+/* 로딩 */
+.loading {
+  position: absolute;
+  top: 70%;
+  left: translate(50%)
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -14,7 +14,7 @@ export default function Cart() {
     navigate('/');
   };
   const {
-    cartProduct: { data: cart },
+    cartProduct: { isLoading, data: cart },
   } = useCart();
 
   const hasProduct = cart && cart.length > 0; // 1개 이상 있다면
