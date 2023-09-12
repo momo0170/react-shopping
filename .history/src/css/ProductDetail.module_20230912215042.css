@@ -132,12 +132,7 @@ select {
     padding: var(--margin-medium);
   }
   .message {
-    background-color: white;
-    padding: 10px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
+    position: absolute;
     transform: translate(-50%, -50%);
-    border-radius: 5px;
   }
 }
