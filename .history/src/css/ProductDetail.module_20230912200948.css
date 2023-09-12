@@ -112,7 +112,7 @@ select {
   }
   .frame {
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
   }
   .image {
     width: 100%;
@@ -121,7 +121,7 @@ select {
     margin: 0 auto;
   }
   .information {
-    width: 90vw;
+    width: 80vw;
     border: none;
     padding: var(--margin-medium);
   }

@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* min-height: 100vh; */
 }
 
 .frame {
@@ -107,30 +108,14 @@ select {
 }
 
 @media (max-width: 767px) {
-  .main {
-    width: 100%;
-  }
   .frame {
     flex-direction: column;
-    align-items: center;
   }
   .image {
-    width: 100%;
-    /* width: 200px;
-    height: 300px; */
-    margin: 0 auto;
+    width: 80vw;
+    height: 50vw;
   }
   .information {
-    width: 90vw;
-    border: none;
-    padding: var(--margin-medium);
-  }
-  .name {
-    font-size: 20px;
-  }
-  .addBtn,
-  .payBtn {
-    font-size: 16px;
-    padding: var(--margin-medium);
+    width: 80vw;
   }
 }

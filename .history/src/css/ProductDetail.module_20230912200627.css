@@ -108,20 +108,18 @@ select {
 
 @media (max-width: 767px) {
   .main {
-    width: 100%;
+    width: 100vw;
   }
   .frame {
     flex-direction: column;
-    align-items: center;
   }
   .image {
-    width: 100%;
-    /* width: 200px;
-    height: 300px; */
+    width: 200px;
+    height: 300px;
     margin: 0 auto;
   }
   .information {
-    width: 90vw;
+    width: 80vw;
     border: none;
     padding: var(--margin-medium);
   }
