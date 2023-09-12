@@ -27,6 +27,7 @@ li {
 }
 .informations {
   display: flex;
+  height: 1000vh;
 }
 .list {
   width: 60vw;
@@ -52,35 +53,14 @@ li {
   border-bottom: 0.5px solid black;
 }
 @media (max-width: 767px) {
-  li {
-    margin-left: 15px;
-    margin-right: 15px;
-    justify-content: space-between;
-  }
   .informations {
     flex-direction: column;
   }
   .list,
   .price {
     width: 100%;
-    margin: 0;
-    padding: 0;
   }
-  .list h1,
-  .price h1 {
+  .list h1 {
     font-size: 18px;
-    margin: 0;
-  }
-  .lineFirst,
-  .lineLast {
-    border-color: #e7e7e7;
-    margin: 0;
-  }
-  .price .lineFirst {
-    margin-bottom: 0;
-  }
-  .price .lineLast {
-    border-color: #e7e7e7;
-    margin: 0 20px;
   }
 }

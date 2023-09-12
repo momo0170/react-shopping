@@ -31,6 +31,7 @@
   cursor: pointer;
   background-color: white;
   border: 1px solid #c0c0c0;
+  border-radius: 4px;
   outline: 0;
   background-color: transparent;
 }
@@ -38,7 +39,6 @@
   display: flex;
   flex-direction: column;
 }
-
 .btns button:hover {
   background-color: black;
   color: white;
@@ -50,7 +50,6 @@
   margin-left: 10px;
 }
 .deleteBtn {
-  margin-top: 5px;
   padding: 5px 5px;
 }
 .deleteBtn:hover {
@@ -58,10 +57,4 @@
   color: white;
 }
 @media (max-width: 767px) {
-  .btns div:first-child {
-    display: flex;
-  }
-  .text span {
-    width: 100%;
-  }
 }

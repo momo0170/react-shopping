@@ -61,7 +61,4 @@
   .btns div:first-child {
     display: flex;
   }
-  .text span {
-    width: 100%;
-  }
 }

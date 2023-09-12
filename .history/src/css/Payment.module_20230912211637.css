@@ -4,7 +4,6 @@
   width: 90%;
   color: white;
   background-color: black;
-  border: none;
 }
 @media (max-width: 767px) {
   .payment {
@@ -12,7 +11,5 @@
     width: 100%;
     position: sticky;
     bottom: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
   }
 }

@@ -53,9 +53,8 @@ li {
 }
 @media (max-width: 767px) {
   li {
-    margin-left: 15px;
-    margin-right: 15px;
-    justify-content: space-between;
+    margin-left: 5px;
+    margin-right: 5px;
   }
   .informations {
     flex-direction: column;

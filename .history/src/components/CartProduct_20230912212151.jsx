@@ -22,16 +22,29 @@ export default function CartProduct(props) {
 
   return (
     <>
-      <img src={image} alt="product-image" className={styles.cartImage} />
-      <span>{name}</span>
-      <span>{selectedOpt}</span>
-      <span>{price}</span>
-      <div className={styles.btns}>
-        <button onClick={minusQuantity}>-</button>
-        <span>{quantity}</span>
-        <button onClick={plusQuantity}>+</button>
+      {/* 상품 정보 */}
+      <div className={styles.productInfo}>
+        <img src={image} alt="product" className={styles.cartImage} />
+        <div className={styles.text}>
+          <span className={styles.name}>{name}</span>
+          <span className={styles.option}>{`[옵션: ${selectedOpt}]`}</span>
+          <span className={styles.price}>{`${price.toLocaleString()}원`}</span>
+        </div>
       </div>
-      <button onClick={deleteProduct}>삭제</button>
+
+      {/* 버튼 */}
+      <div className={styles.btns}>
+        <button onClick={minusQuantity} className={styles.minusBtn}>
+          -
+        </button>
+        <span>{quantity}</span>
+        <button onClick={plusQuantity} className={styles.plusBtn}>
+          +
+        </button>
+        <button onClick={deleteProduct} className={styles.deleteBtn}>
+          삭제
+        </button>
+      </div>
     </>
   );
 }
