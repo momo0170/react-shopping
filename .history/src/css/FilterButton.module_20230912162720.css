@@ -18,6 +18,6 @@
   .all,
   .man,
   .woman {
-    padding: var(--margin-medium) var(--margin-xlarge);
+    padding: var(--margin-medium) var(--margin-medium);
   }
 }
