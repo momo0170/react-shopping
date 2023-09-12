@@ -130,9 +130,6 @@ form span {
     align-items: center;
   }
   .imageName {
-    width: 60vw;
-  }
-  .inputs {
-    width: 100%;
+    width: 80vw;
   }
 }

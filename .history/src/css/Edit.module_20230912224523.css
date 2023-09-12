@@ -121,18 +121,4 @@ form span {
     padding: 0;
     border: none;
   }
-  .fileBox {
-    width: 100%;
-  }
-  .imgAndUpload {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .imageName {
-    width: 60vw;
-  }
-  .inputs {
-    width: 100%;
-  }
 }
