@@ -10,7 +10,8 @@
 }
 
 .image {
-  width: 400px;
+  width: 40vw;
+  height: 60vw;
 }
 
 /* 제품 정보 */
@@ -142,11 +143,4 @@ select {
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
-  .image {
-    width: 40vw;
-  }
-  .information {
-    border: none;
-    width: 40vw;
-  }
 }
