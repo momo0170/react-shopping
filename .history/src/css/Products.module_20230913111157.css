@@ -34,12 +34,7 @@ ul {
 
 /* 태블릿 */
 @media (min-width: 768px) and (max-width: 1199px) {
-  .frame {
-    margin-left: 15px;
-    margin-right: 15px;
-  }
   ul {
-    width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
   }
 }
