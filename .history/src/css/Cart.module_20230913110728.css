@@ -51,7 +51,6 @@ li {
   margin: 10px 0;
   border-bottom: 0.5px solid black;
 }
-/* 모바일 */
 @media (max-width: 767px) {
   li {
     margin-left: 15px;
@@ -112,5 +111,13 @@ li {
   }
   .price .lineLast {
     border-bottom-color: #e7e7e7;
+  }
+
+  /* 태블릿 가로 */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .list .lineFirst,
+    .list .lineLast {
+      border-bottom: 0.5px solid #e7e7e7;
+    }
   }
 }
